@@ -1,0 +1,38 @@
+/*reset*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Variables que puedes alcanzar en cualquier momento
+    Se puede acceder en cualquier momento*/
+    --bg_header: rgba(12, 102, 62, 1);
+    --primary: rgba(228, 128, 128, 1);
+    --stroke: rgba(133, 243, 232, 1);
+    --font_principal: "Montserrat", sans-serif;
+    --white: white;
+
+}
+
+body{
+    font-family: var(--font_principal);
+}
+
+.site-header{
+    background-color: var(--bg_header);
+    border-color: 2px solid var(--stroke);
+    padding: 32px;
+}
+.site-header h1{}
+.site-header .main-navigation{}
+.site-header .main-navigation .main-menu{}
+.site-header .main-navigation .main-menu .menu-item{}
+.site-header .main-navigation .main-menu .menu-item a{}
+.site-header .main-navigation .main-menu .menu-item a:hover{
+    background-color: var(--primary);
+    padding: 16px 4px;
+    display: inline-block;
+}
+
