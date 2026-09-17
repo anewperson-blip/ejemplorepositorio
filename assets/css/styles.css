@@ -1,0 +1,52 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*variables*/
+:root { /*permite establecer el alcance de la variable*/
+    --bg_header: #DBEBA6;
+    --stroke: #876B37;
+    --primary: #E9B75A;
+    --font_principal: "Inter", sans-serif;
+    --white: #ffffff
+}
+
+body {
+    font-family: var(--font_principal); /*Establecido de manera general para que se herede en todo lo demás*/
+}
+
+.site-header {
+    background-color: var(--bg_header);
+    border-bottom: 2px solid var(--stroke);
+    padding: 32px;
+}
+
+.site-header h1 {
+    
+
+}
+
+.site-header .main-navigation {
+
+}
+
+.site-header .main-navigation .main-menu {
+
+}
+
+.site-header .main-navigation .main-menu .menu-item {
+
+}
+
+.site-header .main-navigation .main-menu .menu-item a {
+    background-color: var(--white);
+    padding: 15px 40px;
+    display: inline-block;
+}
+
+.site-header .main-navigation .main-menu .menu-item a:hover {
+    background-color: var(--primary);
+}
