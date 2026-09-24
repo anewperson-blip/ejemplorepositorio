@@ -1,0 +1,44 @@
+/*Reseteo de todos los elementos*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*Variable y valores repetidos-Figma*/
+ :root{ /*establece alcance variable
+    alcanzar y acceder en cualquier momento*/
+   --color1:green;/*Variable, espacio en memoria*/
+   --bg_header: #88DBFF; 
+   --primary:#88DBFF;
+   --stroke:#005868;
+   --font_family: Montserrat, sans-serif;
+   --white:white;
+   }
+
+   body{
+      font-family: var(--font_family);
+   }
+
+.site-header{
+   background-attachment: var(--bg_header);
+   background-origin: 2px solid var(--stroke);
+   padding: 72px;
+ }
+
+ .site-header h1{}
+
+ .site-header .main-navigation{}
+
+  .site-header .main-navigation .main-menu{}
+
+  .site-header .main-navigation .main-menu .menu-item{}
+
+ .site-header .main-navigation .main-menu .menu-item a{
+   background-color: var(--white);
+   padding: 13px 6px 13px 6px;
+   display: inline-block;
+ }
+.site-header .main-navigation .main-menu .menu-item.menu-item:hoover{
+   background-color: var(--primary);
+}
