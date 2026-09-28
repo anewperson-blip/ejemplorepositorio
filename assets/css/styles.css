@@ -3,17 +3,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 /*variables*/
 :root { /*permite establecer el alcance de la variable*/
+    /*colors*/
     --bg_header: #DBEBA6;
     --stroke: #876B37;
     --primary: #E9B75A;
+    --white: #ffffff;
+    --black: #000;
+    /*Fonts*/
     --font_principal: "Inter", sans-serif;
-    --white: #ffffff
+    /*Spacers: relación morfológica más ordenada*/
+    --s8: 8;
+    --s16: 16;
+    --s24: 24;
+    --s32: 32;
+    --s40: 40;
+    --s48: 48;
+    --s56: 56;
+    --s64: 54;
+    --s72: 72;
+    --s80: 80;
+    /*Semantics: dar un significado de cuando utilizar los valores*/
+    --gap-nav: var(--s16);
+    --boton-padding-x: var(--s40);
+    --boton-padding-y: var(--s16);
 }
 
+/*recorrer jerárquicamente todos los elementos*/
 body {
     font-family: var(--font_principal); /*Establecido de manera general para que se herede en todo lo demás*/
 }
@@ -22,6 +43,8 @@ body {
     background-color: var(--bg_header);
     border-bottom: 2px solid var(--stroke);
     padding: 32px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .site-header h1 {
@@ -33,8 +56,10 @@ body {
 
 }
 
-.site-header .main-navigation .main-menu {
-
+.site-header .main-navigation .main-menu { /*controla los bullets, toda la lista*/
+    /*list-style: none;*/
+    display: flex; /*organizar desde el padre de forma horizontal,los hijos dejan de ser elementos de bloque*/
+    gap: var(--gap-nav); /*solo funciona si hay display flex*/
 }
 
 .site-header .main-navigation .main-menu .menu-item {
@@ -43,10 +68,23 @@ body {
 
 .site-header .main-navigation .main-menu .menu-item a {
     background-color: var(--white);
-    padding: 15px 40px;
+    /*padding: 15px 40px;*/
+    padding: var(--boton-padding-x) var(--boton-padding-y);
     display: inline-block;
+    color: var(--black);
+    /*text-decoration: none;*/
+    border-radius: 50px;
 }
 
 .site-header .main-navigation .main-menu .menu-item a:hover {
     background-color: var(--primary);
 }
+
+
+.main-content {
+    width: 1200px;
+    margin: 0 auto;
+    padding: var(--s32);
+}
+
+.main-content .section-content {}
