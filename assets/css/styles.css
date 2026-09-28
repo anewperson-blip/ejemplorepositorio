@@ -3,42 +3,114 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-}
+    list-style:none; /*Cambiar bullets, resetear, si lo necesitas lo vuelves a poner*/
+    text-decoration: none; /*Subrayado que viene con a, tachar, linea superior*/
+   /*Lo anulamos*/
+   }
 
 /*Variable y valores repetidos-Figma*/
  :root{ /*establece alcance variable
     alcanzar y acceder en cualquier momento*/
+
+    /*COLORS*/
    --color1:green;/*Variable, espacio en memoria*/
    --bg_header: #88DBFF; 
-   --primary:#88DBFF;
+   --primary:#98E6D1;
    --stroke:#005868;
    --font_family: Montserrat, sans-serif;
-   --white:white;
-   }
+   --white:#fff;
+   ----black:#000; /*3 o 6 numeros validos en blanco y negro*/
+ /*SPACERS necesitas letras en variables :(*/
+   --s8:8px;
+   --s16:16px;
+   --s24:24px;
+   --s32:32px;
+   --s40:40px;
+   --s48:48px;
+   --s56:56px;
+   --s64:64px;
+   --s72:72px;
+/*Semantico-orden y sistematizacion*/
+   --gap-nav: var(---s16);/*dars entido a uso de VARIABÑES*/
+   --btn-padding-x:var(--s40); /*siempre los usaras*/
+   --btn-padding-y:var(--s16);
+}
 
    body{
       font-family: var(--font_family);
    }
 
 .site-header{
-   background-attachment: var(--bg_header);
-   background-origin: 2px solid var(--stroke);
-   padding: 72px;
- }
+   background-color: var(--bg_header);
+   border: 2px solid var(--stroke);
+   padding: 32px;
+   display:flex; /*Cambiar flujo de bloques hijos (h1*/
+   justify-content: space-between;
+}
 
- .site-header h1{}
+.site-header h1{
 
- .site-header .main-navigation{}
+} /*etiquetas de clase geenrales*/
 
-  .site-header .main-navigation .main-menu{}
+.site-header .main-navigation{
+
+   
+}
+
+.site-header .main-navigation .main-menu{ /*Selector*/
+  /* list-style:none; /*Cambiar bullets, resetear*/
+   /*border:black para ver su FLUJO
+   
+   se ordenanan verticalmente*/
+
+   display:flex; /*Cambiar flujo de bloques hijos de ul*/
+   /*flex-direction: ; flujo, por defecto horizontal*/
+   gap:var(--gap-nav);
+   
+}
 
   .site-header .main-navigation .main-menu .menu-item{}
 
  .site-header .main-navigation .main-menu .menu-item a{
    background-color: var(--white);
-   padding: 13px 6px 13px 6px;
-   display: inline-block;
- }
-.site-header .main-navigation .main-menu .menu-item.menu-item:hoover{
+   padding: var(--btn-padding-y) var(--btn-padding-x);
+   display: inline-block; /*Usa apropiedades de bloque y linea*/
+   color:var(----black);
+   border-radius:55px;
+  /* text-decoration: none; /*Subrayado que viene con a, tachar, linea superior*/
+   /*Lo anulamos*/
+   /*Eliminar bullets*/
+
+}
+
+.site-header .main-navigation .main-menu .menu-item a:hover{
    background-color: var(--primary);
+}
+
+/*Recuerda las clases*/
+
+/*ul condiciona la presencia de bullet, ahi anulas
+
+list-style: ; convierte bullets en numeros, incisoso
+
+dudas: selectore sy otros tipos, diplay inline y etiquetas*/
+
+.main-content{
+   padding: var(--s32);
+   display:flex;
+   flex-direction: column;
+   gap:var(--s32);
+}
+.main-content .section{
+   width: 1200px; /*Un ancho maxiomo y un margen nos dan mas control del contenido*/
+   margin: 0 auto;
+   padding: var(--s32);
+   /*border: 2px solid var(--stroke);
+   
+   display:flex;
+   flex-direction: column;
+   gap:var(--s32);*/
+}
+.main-content .section.site-header{
+   
 }
