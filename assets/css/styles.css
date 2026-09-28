@@ -3,36 +3,94 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+     /*Cambia el estilo de la lista y al 
+    poner non se borran los punteos*/
+    list-style: none;
+    text-decoration: none;
 }
 
 :root{
     /*Variables que puedes alcanzar en cualquier momento
     Se puede acceder en cualquier momento*/
+    /*========================================================
+                    Variables de color
+    ==========================================================*/
     --bg_header: rgba(12, 102, 62, 1);
     --primary: rgba(228, 128, 128, 1);
     --stroke: rgba(133, 243, 232, 1);
     --font_principal: "Montserrat", sans-serif;
-    --white: white;
+    /*los valores duplicados se pueden simplificar*/
+    --white: #fff;
+    /*========================================================
+                    Variables spacers
+    ==========================================================*/
+    --s8: 8px;
+    --s16: 16px;
+    --s24: 24px;
+    --s32: 32px;
+    --s40: 40px;
+    --s48: 48px;
+    --s56: 56px;
+    --s64: 64px;
+    --s72: 72px;
 
+    /*Sepatics*/
+    --gap-nav: var(--s8);
+    --btn-padding-x: var(--s40);
+    --btn-padding-y: var(--s16);
 }
 
 body{
     font-family: var(--font_principal);
+    
 }
 
 .site-header{
     background-color: var(--bg_header);
     border-color: 2px solid var(--stroke);
     padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--stroke);
 }
-.site-header h1{}
-.site-header .main-navigation{}
-.site-header .main-navigation .main-menu{}
+.site-header h1{
+    
+}
+.site-header .main-navigation{
+    
+}
+.site-header .main-navigation .main-menu{
+    /*Flex box hace que se ordene solo horizontalmente y 
+    grid es horizontalmente o vertical*/
+    display: flex;
+    /*Espacio entre los mismos elementos*/
+    gap:var(--gap-nav);
+    /*Es la manera de que se vuelva columna
+    flex-direction: column;*/
+
+}
 .site-header .main-navigation .main-menu .menu-item{}
-.site-header .main-navigation .main-menu .menu-item a{}
+.site-header .main-navigation .main-menu .menu-item a{
+    background-color: var(--stroke);
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    /* permite que un elemento se comporte con otra lógica, 
+    las propiedades se pueden otorgar*/
+    display: inline-block;
+    color: var(--bg_header);
+    border-radius: 20px;
+}
 .site-header .main-navigation .main-menu .menu-item a:hover{
     background-color: var(--primary);
-    padding: 16px 4px;
-    display: inline-block;
 }
+
+.main-content{
+    width: 1200px;
+    margin: 0 auto;
+    padding: var(--s32);
+}
+.main-content .section{
+
+}
+
+
 
