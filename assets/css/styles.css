@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap');
+
 /*reset*/
 *{
     margin: 0;
@@ -13,9 +15,11 @@
     --bg_header: #CDCDCD;
     --stroke: #9591FB;
     --primary: #F9CE23;
-    --font_principal:"Arial", sans-serif;
     --white: #fff;
     --black: #000;
+
+    /*TYPOGRAPHY*/
+    --font_principal: "Be Vietnam Pro", sans-serif;
 
     /*SPACERS*/
     --s8: 8px;
@@ -43,12 +47,17 @@ body{
     padding: var(--s32);
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .site_header .h1{}
 .site-header .main-navigation{}
 .site-header .main-navigation .main-menu{
     display: flex;
     gap: var(--gap-nav);
+    
 }
 .site-header .main-navigation .main-menu .menu-item{}
 .site-header .main-navigation .main-menu .menu-item a{
