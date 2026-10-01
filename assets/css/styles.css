@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
+
 /*reset*/
 * {
     margin: 0;
@@ -16,18 +18,18 @@
     --white: #ffffff;
     --black: #000;
     /*Fonts*/
-    --font_principal: "Inter", sans-serif;
+    --font_principal: "Anek Devanagari", sans-serif;
     /*Spacers: relación morfológica más ordenada*/
-    --s8: 8;
-    --s16: 16;
-    --s24: 24;
-    --s32: 32;
-    --s40: 40;
-    --s48: 48;
-    --s56: 56;
-    --s64: 54;
-    --s72: 72;
-    --s80: 80;
+    --s8: 8px;
+    --s16: 16px;
+    --s24: 24px;
+    --s32: 32px;
+    --s40: 40px;
+    --s48: 48px;
+    --s56: 56px;
+    --s64: 54px;
+    --s72: 72px;
+    --s80: 80px;
     /*Semantics: dar un significado de cuando utilizar los valores*/
     --gap-nav: var(--s16);
     --boton-padding-x: var(--s40);
@@ -45,6 +47,10 @@ body {
     padding: 32px;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .site-header h1 {
@@ -69,7 +75,7 @@ body {
 .site-header .main-navigation .main-menu .menu-item a {
     background-color: var(--white);
     /*padding: 15px 40px;*/
-    padding: var(--boton-padding-x) var(--boton-padding-y);
+    padding: var(--boton-padding-y) var(--boton-padding-x);
     display: inline-block;
     color: var(--black);
     /*text-decoration: none;*/
