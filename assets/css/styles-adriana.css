@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    /*========================================================
+                    Variables de color
+    ==========================================================*/
+    --bg_header: #3c5b2a;
+    --primary: #edb6c0;
+    --stroke: #cc5168;
+    /*========================================================
+                    TyPOGRAPHI
+    ==========================================================*/
+    --font_principal: "DynaPuff", system-ui;
+    /*los valores duplicados se pueden simplificar*/
+    --white: #fff;
+    /*========================================================
+                    Variables spacers
+    ==========================================================*/
+    --s8: 8px;
+    --s16: 16px;
+    --s24: 24px;
+    --s32: 32px;
+    --s40: 40px;
+    --s48: 48px;
+    --s56: 56px;
+    --s64: 64px;
+    --s72: 72px;
+
+    /*Semantics*/
+    --gap-nav: var(--s16);
+    --btn-padding-x: var(--s40);
+    --btn-padding-y: var(--s16);
+    --title-h1:var(--s32);
+
+}
+body{
+    background-color: var(--primary);
+}
+.site-header{
+    background-color: var(--bg_header);
+    border-color: 2px solid var(--stroke);
+    padding: 32px;
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: space-between;
+    color: var(--stroke);
+    /*permitir comportamientos en específico*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: var(--font_principal);
+}
+.site-header h1{
+
+}
+.site-header .main-navigation{
+
+}
+
+.site-header .main-navigation .main-menu{
+    display: flex;
+    /*flex-direction: column;*/
+    gap:var(--gap-nav);
+    text-align: center;
+}
+
+.site-header .main-navigation .main-menu .menu-item a{
+    background-color: var(--stroke);
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    display: inline-block;
+    color: var(--bg_header);
+    border-radius: var(--btn-padding-x);
+}
+
+.site-header .main-navigation .main-menu .menu-item a:hover{
+    background-color: var(--primary);
+}
+
+
+
+.main-content{
+    width: 1200px;
+    margin: 0 auto;
+    padding: var(--s32);
+}
+
+.main-content h2{
+    font-family: var(--font_principal);
+}
+
+.main-content .presentacion{
+
+}
+
+
+.main-content .detalles{
+
+}
+
+.main-content .gustos-e-intereses{
+
+}
+
+.main-content .algo-que-me-inspira{
+
+}
+
+
+
+
+
+
