@@ -1,5 +1,7 @@
-/*reset*/
+/*Se usa cuando es parte del contenido*/
+/*import=Css y link=html*/
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+/*reset*/
 *{
     margin:0;
     padding:0;
@@ -25,6 +27,7 @@
     --font_principal: "DynaPuff", system-ui;
     /*los valores duplicados se pueden simplificar*/
     --white: #fff;
+    --black: #000;
     /*========================================================
                     Variables spacers
     ==========================================================*/
@@ -94,13 +97,29 @@ body{
 }
 
 .main-content{
+    margin-top: 117px;
+    /*Los guiones son reglas específicas cuando tienen guión,
+    mientras que sin eso es general*/
+    background:url("../images/Group 1.png") fixed;
+    /*No usar rutas absolutas  "/assets/images/fondo.png"*/
+    /*Fondo fijo en la posición fixed y si hace scroll scroll*/
+
+
+}
+/*Se apunta a la etiqueta, no a la clase*/
+.main-content section{
     width: 1200px;
-    margin: 0 auto;
+    background: var(--white);
     padding: var(--s32);
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+    margin: 0 auto;
 }
-.main-content .section{
-
+/*1*, 2etiqueta, 3clase, 4Id, 5Pseudoclase*/
+.main-content .course-description{
+    height: 683px;
+    background: var(--stroke);
+    color: var(--bg_header);
+    
 }
-
-
 
