@@ -72,8 +72,32 @@ body{
 }
 
 .main-content{
-    width: 1200px;
-    margin: 0 auto; 
-    padding: var(--s32);
+    margin-top: 117px;
+    background: url("../images/fondo.png") fixed;
+    
 }
-.main-content section{}
+.main-content section{
+    width: 1200px;
+    background: var(--white);
+    padding: var(--s32);
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+    margin: 0 auto; 
+}
+.main-content .course-description{
+    height: 683px;
+    background: var(--stroke);
+    color: var(--white);
+}
+.main.main-content .course-description h2{
+    color: var(--white);
+}
+.main.main-content .course-description div p{
+    color: var(--white);
+}
+
+*
+etiqueta
+clase
+id
+pseudoclase
