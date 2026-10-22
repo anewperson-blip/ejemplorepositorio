@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/*MOBILE FIRST*/
+/*SIN NINGUN MEDIA QUERY PARA DISPOSITIVOS MOVILES*/
+        div {
+            background: red;
+            height: 100px;
+        }
+        @media screen and (min-width:768px){
+            div{
+                background: green;
+                height: 200px;
+            }
+        }
+        /*DESKTOP*/
+        @media screen and (min-width: 1200px) {
+            div {
+                background: blue;
+                height: 100dvh;
+            }
+        }
+        /*GRANDES FORMATOS*/
+        @media screen and (min-width: 2400px) {
+            div {
+                background: purple;
+                height: 100dvh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

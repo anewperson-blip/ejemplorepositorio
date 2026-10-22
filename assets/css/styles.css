@@ -12,14 +12,17 @@
 :root{
 
     /*COLORS*/
-    --bg_header: #CDCDCD;
-    --stroke: #9591FB;
-    --primary: #F9CE23;
+    --bg_header: #DFE5E3;
+    --stroke: #3D8EFF;
+    --primary: #FED257;
     --white: #fff;
     --black: #000;
 
     /*TYPOGRAPHY*/
     --font_principal: "Be Vietnam Pro", sans-serif;
+    --title_M: 39px;
+    --body_L: 20px;
+    --title_SM: 25px;
 
     /*SPACERS*/
     --s8: 8px;
@@ -73,7 +76,8 @@ body{
 
 .main-content{
     margin-top: 117px;
-    background: url("../images/fondo.png") fixed;
+    background: url("../images/fondo.png");
+    background-attachment: fixed;
     
 }
 .main-content section{
@@ -87,17 +91,56 @@ body{
 .main-content .course-description{
     height: 683px;
     background: var(--stroke);
-    color: var(--white);
-}
-.main.main-content .course-description h2{
-    color: var(--white);
-}
-.main.main-content .course-description div p{
-    color: var(--white);
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--s24);
 }
 
-*
-etiqueta
-clase
-id
-pseudoclase
+.course-description h2{
+    font-size: var(--title_M)
+}
+
+.course-description div {
+    font-size: var(--body_L);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s16);
+}
+
+.students-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s24);
+    justify-content: space-between;
+}
+
+.students-grid .students-card{
+    border: 1px solid black;
+    border-radius: var(--s16);
+    overflow: hidden;
+}
+
+.students-grid .students-card a{
+    width: 263px;
+    height: 110px;
+    padding: var(--s24);
+    transition: all 300ms;
+    color: var(--black);
+    background: url(../images/bi_arrow-right-circle.svg) no-repeat 213px center;
+    background-size: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.students-grid .students-card a .hover{
+    background: var(--primary) url(../images/bi_arrow-right-circle.svg) no-repeat 213px center;
+}
+
+.students-grid .students-card h3{
+    font-size: var(--title_SM);
+    width: 179px;
+}
+
