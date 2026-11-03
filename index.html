@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller de Diseño Digital 1</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,10 @@
      <!-- =====================================================C
          MENÚ PRINCIPAL
     ====================================================== -->
-    <nav class="main-navigation" aria-label="Navegación principal">
+    <button class="menu-toggle" type="button" aria-expanded="true" aria-controls="main-navigation" aria-label="Cerrar menú">
+        <img src="assets/images/iconoir_menu.svg" alt="" width="24" height="24">
+    </button>
+    <nav class="main-navigation" id="main-navigation" aria-label="Navegación principal">
 
         <ul class="main-menu">
             <li class="menu-item">
@@ -36,7 +40,7 @@
             </li>
 
             <li class="menu-item">
-                <a href="#recursos">Recursos</a>
+                <a href="pages/recursos/recursos.html">Recursos</a>
             </li>
         </ul>
 
@@ -296,6 +300,8 @@
                 prototipado y desarrollo frontend.
             </p>
 
+            <a class="project-button" href="pages/proyecto/">Ver proyecto</a>
+
         </section>
 
 
@@ -308,11 +314,45 @@
                 <h2>Recursos</h2>
             </header>
 
+            <p class="resources-intro">Código, videos y herramientas para diseñar y construir.</p>
+
             <ul class="resources-list">
-                <li>Material de clase</li>
-                <li>Repositorio GitHub</li>
-                <li>Documentación de HTML, CSS y JavaScript</li>
-                <li>Recursos de diseño UX/UI</li>
+                <li>
+                    <a class="resource-access resource-access-featured" href="pages/recursos/ejemplos_codepen.html">
+                        <div class="resource-access-content">
+                            <h3>CodePen</h3>
+                            <p>CSS, Flexbox, Grid y JavaScript</p>
+                        </div>
+                        <img src="assets/images/iconoir_arrow-right-circle.svg" alt="" width="24" height="24">
+                    </a>
+                </li>
+                <li>
+                    <a class="resource-access" href="pages/recursos/tutoriales.html">
+                        <div class="resource-access-content">
+                            <h3>Tutoriales</h3>
+                            <p>Videos de YouTube en español</p>
+                        </div>
+                        <img src="assets/images/iconoir_arrow-right-circle.svg" alt="" width="24" height="24">
+                    </a>
+                </li>
+                <li>
+                    <a class="resource-access" href="pages/recursos/librerias.html">
+                        <div class="resource-access-content">
+                            <h3>Librerías</h3>
+                            <p>Herramientas de CSS y JavaScript</p>
+                        </div>
+                        <img src="assets/images/iconoir_arrow-right-circle.svg" alt="" width="24" height="24">
+                    </a>
+                </li>
+                <li>
+                    <a class="resource-access" href="pages/recursos/vinculos_interes.html">
+                        <div class="resource-access-content">
+                            <h3>Vínculos</h3>
+                            <p>Documentación y referencias</p>
+                        </div>
+                        <img src="assets/images/iconoir_arrow-right-circle.svg" alt="" width="24" height="24">
+                    </a>
+                </li>
             </ul>
 
         </section>
