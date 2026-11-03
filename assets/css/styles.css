@@ -22,12 +22,15 @@
     --primary: rgba(228, 128, 128, 1);
     --stroke: rgba(133, 243, 232, 1);
     /*========================================================
-                    TyPOGRAPHI
+                    TyPOGRAPHY
     ==========================================================*/
     --font_principal: "DynaPuff", system-ui;
+    --title-M: 39px;
+    --title-XS: 25px;
     /*los valores duplicados se pueden simplificar*/
     --white: #fff;
     --black: #000;
+    --body-L: 20px;
     /*========================================================
                     Variables spacers
     ==========================================================*/
@@ -120,6 +123,58 @@ body{
     height: 683px;
     background: var(--stroke);
     color: var(--bg_header);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--s24);
+}
+
+.main-content .course-description h2{
+    font-size: var(--title-M);
+}
+.main-content .course-description div{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s16);
+}
+/*Students grid es la división principal del card div
+Student-card compuesto por un A y un H3*/
+.students-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s24);
+    justify-content: center;
+}
+
+.students-grid .student-card{
+    width: 263px;
+    height: 110px;
+    border:1px solid var(--bg_header);
+    border-radius: var(--s24);
+    overflow: hidden;
     
 }
+.students-grid .student-card a{
+    display: block;
+    width: 263px;
+    height: 110px;
+    /*padding en solo un elemento*/
+    padding: var(--s24);
+    background: url(../images/iconoir_arrow-right-circle.svg) no-repeat 203px center;
+    background-size: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.students-grid .student-card a:hover{
+    background : var(--stroke) url(../images/iconoir_arrow-right-circle.svg) no-repeat 203px center;
+}
+.students-grid .student-card h3{
+    font-size: var(--title-XS);
+    width: 142px;
+}
+
+/*La imagen, en este caso, debe entrar por CSS*/
 
