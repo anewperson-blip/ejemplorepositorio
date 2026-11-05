@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/*RESETEO*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*VARIABLES*/
+:root {
+    /*colors*/
+    --green: #A5FF16;
+    --maroon: #320A06;
+    --light_maroon: #610203;
+    --white: #fff;
+
+    /*Fonts*/
+    --font_principal: "Kanit", sans-serif;
+    --title: 49px;
+    --subtitle: 31px;
+    --body_l: 20px;
+    --body_m: 16px;
+
+    /*Spacers*/
+    --s8: 8px;
+    --s16: 16px;
+    --s24: 24px;
+    --s32: 32px;
+    --s40: 40px;
+    --s48: 48px;
+    --s56: 56px;
+    --s64: 54px;
+    --s72: 72px;
+    --s80: 80px;
+    --s88: 88px;
+
+    /*Semantics*/
+    --general_padding: var(--s88);
+    --button_padding_x: var(--s16);
+    --button_padding_y: var(--s8);
+    --border_radio: 20px;
+}
+
+body {
+    font-family: var(--font_principal);
+    color: var(--maroon);
+    background-color: var(--green);
+}
+p {
+    font-size: var(--body_m);
+}
+h2 {
+    font-size: var(--subtitle);
+}
+h1 {
+    font-size: var(--title);
+    white-space: nowrap;
+}
+
+.header-del-sitio {
+    background-color: var(--white);
+    border-bottom: 4px solid var(--maroon);
+    padding: var(--s32) var(--s48);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+.contenido-principal {
+    padding-top: 114px;
+}
+.menu-principal {
+    display: flex;
+    gap: var(--s40);
+}
+
+.menu-principal .menu-item {
+    background-color: var(--maroon);
+    font-size: var(--body_m);
+    padding: var(--button_padding_y) var(--button_padding_x);
+    border-radius: var(--border_radio);
+}
+
+.menu-principal .menu-item a {
+    color: var(--white);
+}
+
+header h3 {
+    font-size: var(--subtitle);
+}
+
+.contenido-principal .presentacion-y-sobre-mi {
+    display: flex;
+    width: 100%;
+}
+.contenido-principal .presentacion-y-sobre-mi .presentacion {
+    background-color: var(--white);
+    padding: var(--general_padding);
+    justify-content: center;
+    text-align: center;
+}
+
+.contenido-principal .presentacion-y-sobre-mi .presentacion img {
+    width: 412px;
+    border-radius: var(--border_radio);
+    border: var(--s24) var(--green) solid ;
+}
+
+.contenido-principal .presentacion-y-sobre-mi .presentacion p {
+    font-style: italic;
+}
+
+.contenido-principal .presentacion-y-sobre-mi .presentacion a {
+    font-weight: bold;
+    font-size: var(--body_m);
+    color: var(--maroon)
+}
+
+.contenido-principal .presentacion-y-sobre-mi .sobre-mi {
+    padding: var(--general_padding);
+}
+
+.contenido-principal .gustos-intereses {
+    background-color: var(--maroon);
+    color: var(--white);
+    padding: var(--s40) var(--general_padding) var(--s56) var(--general_padding);
+    gap: var(--s48);
+    width: 100vw;
+}
+
+.contenido-principal .gustos-intereses ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenido-principal .gustos-intereses ul li {
+    background-color: var(--light_maroon);
+    width: 200px;
+    height: var(--s72);
+    padding: var(--s24) var(--s16) var(--s24) var(--s16);
+    text-align: center;
+    border-radius: var(--border_radio);
+}
+
+.contenido-principal .inspiraciones {
+    display: flex;
+    gap: var(--s56);
+    width: 100vw;
+    padding: var(--general_padding);
+}
+
+
+.contenido-principal .inspiraciones .foto-y-descripcion img {
+    width: 560px;
+    border-radius: var(--border_radio);
+}
+
+footer {
+    background-color: var(--maroon);
+    color: var(--white);
+    padding: var(--s32) var(--general_padding) ;
+    width: 100vw;
+}
+
+footer p {
+    font-weight: lighter;
+    text-align: center;
+}
