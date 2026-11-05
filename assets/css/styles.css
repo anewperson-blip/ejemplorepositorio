@@ -1,4 +1,11 @@
 /*Reseteo de todos los elementos*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital@0;1&display=swap');
+
+/*Import nos permite buscar una hoja de estilo externa y agreagrla, buscrala en google fonts
+
+@import url recorre hoja de estilos */
+
+ /*@import url (...pages  / style-liz.css); /*Importa hoja de estilos externa*/                 
 *{
     margin: 0%;
     padding: 0%;
@@ -8,7 +15,7 @@
    /*Lo anulamos*/
    }
 
-/*Variable y valores repetidos-Figma*/
+/*Variable y valores repetidos en Figma*/
  :root{ /*establece alcance variable
     alcanzar y acceder en cualquier momento*/
 
@@ -17,9 +24,16 @@
    --bg_header: #88DBFF; 
    --primary:#98E6D1;
    --stroke:#005868;
-   --font_family: Montserrat, sans-serif;
+   --bg_header_lighter:#CFF0FF;
+
+   --font_family:"Noto Sans Display", sans-serif; /*Lllamar a tipografia elegida, google fonts lo indica*/
+   --title_m:49px; /*Variable, espacio en memoria*/
+   --body_l:20px; /*Variable, espacio en memoria*/
+   --title_sm:25px; /*Variable, espacio en memoria*/
+   
+   
    --white:#fff;
-   ----black:#000; /*3 o 6 numeros validos en blanco y negro*/
+   --black:#000; /*3 o 6 numeros validos en blanco y negro*/
  /*SPACERS necesitas letras en variables :(*/
    --s8:8px;
    --s16:16px;
@@ -31,8 +45,8 @@
    --s64:64px;
    --s72:72px;
 /*Semantico-orden y sistematizacion*/
-   --gap-nav: var(---s16);/*dars entido a uso de VARIABÑES*/
-   --btn-padding-x:var(--s40); /*siempre los usaras*/
+   --gap-nav: var(--s16);/*dars entido a uso de VARIABÑES, relacion intr[inseca*/
+   --btn-padding-x:var(--s40); /*siempre los usaras, para que haya consistencia en botones*/
    --btn-padding-y:var(--s16);
 }
 
@@ -46,6 +60,12 @@
    padding: 32px;
    display:flex; /*Cambiar flujo de bloques hijos (h1*/
    justify-content: space-between;
+
+   position:fixed; /*Posicion fija (4 tipos) ocupa todo el ancho*/
+   top: 0;
+   left: 0;
+   width:100%;
+   /*Luego vamos a areglar que parte dle contenido es cubierto por el header*/
 }
 
 .site-header h1{
@@ -66,6 +86,7 @@
    display:flex; /*Cambiar flujo de bloques hijos de ul*/
    /*flex-direction: ; flujo, por defecto horizontal*/
    gap:var(--gap-nav);
+
    
 }
 
@@ -75,7 +96,7 @@
    background-color: var(--white);
    padding: var(--btn-padding-y) var(--btn-padding-x);
    display: inline-block; /*Usa apropiedades de bloque y linea*/
-   color:var(----black);
+   color:var(--black);
    border-radius:55px;
   /* text-decoration: none; /*Subrayado que viene con a, tachar, linea superior*/
    /*Lo anulamos*/
@@ -96,15 +117,32 @@ list-style: ; convierte bullets en numeros, incisoso
 dudas: selectore sy otros tipos, diplay inline y etiquetas*/
 
 .main-content{
-   padding: var(--s32);
+   margin-top: 120.8px; /*Para que no se superponga el header, ya que es fijo*/
+   padding: 0 var(--s32) var(--s32) var(--s32);
    display:flex;
    flex-direction: column;
    gap:var(--s32);
+   background-color: var(--white);
+   background:url("../images/fondo.png") fixed; /*Imagen de fondo, ruta relativa, no absoluta*/
+   background-attachment: fixed;
+   background-repeat: repeat;
+   background-size: 15px;
+   
+   
+   /*background attachment: fixed; /*Fija la imagen de fondo, no se mueve al hacer scroll*/
+   /*background-size: cover; /*Tamaño de la imagen, si no se ve es porque no esta en la ruta correcta*/
+      /*se adapta apantañña*/
+   /*background-position: 10px 10px; /*Posicionamiento de la imagen, si no se ve es porque no esta en la ruta correcta*/
+   /*background-repeat: repeat x;*/
+   /*background-repeat: no repeat;*/
+   /*No uses rutas absolutas, slash es otra cosa, como /assers/images/fondo.png, relativo
+   ya que depende de la ubi del css*/
 }
 .main-content .section{
    width: 1200px; /*Un ancho maxiomo y un margen nos dan mas control del contenido*/
    margin: 0 auto;
    padding: var(--s32);
+   background-color: var(--white);
    /*border: 2px solid var(--stroke);
    
    display:flex;
@@ -114,3 +152,98 @@ dudas: selectore sy otros tipos, diplay inline y etiquetas*/
 .main-content .section.site-header{
    
 }
+
+.main-content section{
+   width: 1200px; /*Un ancho maxiomo y un margen nos dan mas control del contenido*/
+   margin: 0 auto;
+   background-color: var(--white);
+   border-left: 2px solid var(--black);
+   border-right: 2px solid var(--black);
+   padding: var(--s32);
+   
+}
+
+.main-content .course-description{
+   height: 363px;
+   background-color: var(--bg_header_lighter);
+   color: var(--stroke);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+  
+  
+ 
+}
+
+.course-description h2{
+   font-size: var(--title_m);
+   margin-bottom: var(--s48);
+}
+
+.course-description div{
+   font-size: var(--body_l);
+   width: 969px;
+   display: flex;
+   flex-direction: column;
+   gap: var(--s24);
+   
+}
+
+                   /*ESTUDIANTES*/
+
+.students-grid{
+   display: flex;
+   flex-wrap: wrap ;
+   gap: 32px 36px;
+   padding: var(--s16);
+   border-radius: 12px;
+   justify-content: center;
+}
+
+.students-grid .student-card{
+  
+   border: 1px solid var(--stroke);
+   border-radius: 8px;
+   background: #FFF;
+}
+
+.students-grid .student-card h3{
+  width: 199px;
+  font-size: var(--title_sm);
+}
+
+.students-grid .student-card a{  /*Que a cubra todo el card*/
+  
+   display: block;
+   width: 279px;
+   height: 56px;
+   
+   gap: 24px;
+   padding: var(--btn-padding-y, 16px) var(--btn-padding-x, 16px);
+   color: var(--black);/*Condiciona h3*/
+
+   background:url(../images/Vector.svg) no-repeat 213px center; /*Imagen de fondo, ruta relativa, no absoluta*/
+   background-size: 24px 24px; /*Tamaño de la imagen, si no se ve es porque no esta en la ruta correcta*/
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.students-grid .student-card a:hover{  /*Que a cubra todo el card*/
+  
+   display: block;
+   width: 279px;
+   height: 56px;
+  
+   gap: 24px;
+   padding: var(--btn-padding-y, 16px) var(--btn-padding-x, 16px);
+   background: var(--primary) url(../images/Vector.svg) no-repeat 270px center;
+    background-size: 24px 24px; /*Tamaño de la imagen, si no se ve es porque no esta en la ruta correcta*/
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   overflow: hidden;
+
+   
+}
+

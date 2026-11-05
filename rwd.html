@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    /*Mobile first, sin media query todas la propiedades para dispositivos movile sy peques
+     tamanos peque, tab;etas
+    luego separamso media querys a mas grandes, menos lines, m[as control*/
+
+        /*Celu*/
+        div{
+            background-color: red;
+            height: 100px;
+        }
+
+        /*Tablet*/
+         @media screen and (min-width: 768px) {
+            div{
+                background-color: rgb(0, 255, 17);
+                height: 200px;
+            }
+        }
+
+        /*Desktop*/
+        @media screen and (min-width: 1200px) {
+            div{
+                background-color: rgb(0, 0, 255);
+                height: 100dvh;
+            }
+        }
+
+        
+        /*Desktop*/
+        @media screen and (min-width: 2400px) {
+            div{
+                background-color: rgb(255, 0, 195);
+                height: 100dvh;
+            }
+        }
+        /*Discrimina rangos: de 1200px a 2399px*/
+        /*100dvh llena toda la altura de la ventana gráfica*/
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media print{
+            body{
+                width: 32cm;
+                height: 30cm;
+            }
+
+            div{
+               width: 100%;
+                height: 3cm;
+                background-color: white;
+            }
+
+        }
+
+    </style> 
+</head>
+<body>
+    <div></div>
+</body>
+</html>
