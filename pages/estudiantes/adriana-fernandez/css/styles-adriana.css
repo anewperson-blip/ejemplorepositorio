@@ -19,6 +19,7 @@
     ==========================================================*/
     --font_principal: "DynaPuff", system-ui;
     /*los valores duplicados se pueden simplificar*/
+    --font_secundaria: "Montserrat", sans-serif;
     --white: #fff;
     /*========================================================
                     Variables spacers
@@ -87,32 +88,62 @@ body{
 
 
 .main-content{
+    margin-top: 117px;
+    background: url("../imagenes/fondo kirby.jpg") fixed;
+    
+}
+
+.main-content section{
     width: 1200px;
     margin: 0 auto;
     padding: var(--s32);
+    gap: var(--s8);
+    border: 5px solid var(--bg_header);
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column; /* Coloca los elementos uno debajo del otro (texto arriba, imagen abajo) */
+    align-items: center;    /* Centra los elementos horizontalmente en el medio */
+    text-align: center;
 }
 
 .main-content h2{
     font-family: var(--font_principal);
+    font-size: var(--s32);
+    color: var(--stroke);
+    display: flex;
+    flex-direction: column;  
+    text-align: center; 
+}
+.main-content img{
+    border: 6px dashed var(--bg_header);
+}
+.main-content p{
+    font-family: var(--font_secundaria);
+    font-weight: 600;
+    color: var(--bg_header);
 }
 
-.main-content .presentacion{
+.main-content a{
+    font-family: var(--font_principal);
+    font-size: var(--s24);
+    color: var(--stroke);
+}
+.main-content a:hover{
 
+    color: var(--bg_header);
 }
 
 
-.main-content .detalles{
-
+.main-content ul{
+    font-family: var(--font_secundaria);
+    font-weight: 600;
+    color: var(--bg_header);
 }
 
-.main-content .gustos-e-intereses{
 
+.main-content ul li{
+    margin-bottom: var(--s8);
 }
-
-.main-content .algo-que-me-inspira{
-
-}
-
 
 
 
