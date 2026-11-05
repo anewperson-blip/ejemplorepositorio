@@ -11,13 +11,19 @@ body{
     font-family: var(--font-principal);
 }
 :root{
-    --bg-header:#F0C8F9;
-    --stoke:#570D6F;
-    --primary:#deeb7e;
+    --bg-header:#59002A;
+    --stoke:#747AB0;
+    --primary:#f9fed2;
     --font-principal: "Arial", sans-serif;
     --white:#fcfcfc;
     --black:#000000;
-    / speaces/
+
+    /*typograpy*/
+    --font_principal:"Monserrat Alternates",sans-serif;
+    --title_m:39px;
+    --body_l:20px;
+    --title_SM:15px;
+    /*speaces*/
 
     --s8: 8px;
     --s16: 16px;
@@ -29,7 +35,7 @@ body{
     --s64: 64px;
     --s72: 72px;
     --s80: 80px;
-    / semantics/
+    /* semantics*/
 
     --nav-gap: var(--s16);
     --btn-padding-X: var(--s40);
@@ -42,6 +48,10 @@ body{
     padding: var(--s32);
     display:flex;
     justify-content: space-between;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 } 
 
 .site-header h1{
@@ -51,6 +61,7 @@ body{
    
     display:flex;
     gap: var(--nav-gap);
+    
 
 }
 .site-header .main-navigation .main-menu .menu-item{
@@ -67,4 +78,76 @@ body{
 }
 .site-header .main-navigation .main-menu .menu-item a:hover{
     background-color: var(--primary);
+}
+.main-content{
+    margin-top: 117px;
+    background: url("/assets/images\ /fondoweb.png");
+   background-attachment: fixed;
+}
+.main-content section{
+    width: 1200px;
+    background-color: var(--white);
+    padding: var(--s32);
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+    margin: 0 auto;
+
+}
+.main-content .course-descripcion{
+    height: 683px;
+    background: var(--stoke);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--s24);
+}
+.course-descripcion h2{
+
+    color:var(--white);
+    font-size: var(--title_m);
+
+}
+.course-descripcion div p{
+    color: var(--white);
+    font-size: var(--body_l);
+    display:flex;
+    flex-direction: column;
+    gap: var(--s16)
+}
+.students-grid{
+   display: flex;
+   flex-wrap: wrap;
+   gap: var(--s24);
+   justify-content: space-between;
+}
+
+
+.students-grid .student-card{
+   
+    border: 1px solid var(--bg-header);
+    border-radius: var(--s16);
+    overflow: ;
+
+}
+.students-grid .student-card a{
+    display:block;
+    width: 263px;
+    height: 110px;
+    padding: var(--s24);
+    transition: all 300ms;
+    background-size: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.students-grid .student-card a:hover{
+    background:url(../images/iconoir_arrow-rigth-circle.svg) no repeat center 213px center;
+    background-color: var(--primary);
+}
+
+.students-grid .student-card h3{
+    font-size: var(--title_SM);
+    width: 170px;
 }

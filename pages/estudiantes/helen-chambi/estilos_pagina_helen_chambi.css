@@ -1,57 +1,117 @@
-/* Estilo general de la página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #cd7575;
-    color: #000000;
-    margin: 20px;
+
+/* =====================================
+   ESTILO GENERAL DE LA PÁGINA
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Encabezado */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #faf2f2, #f3e5f5);
+    color: #4a354a;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(150, 100, 150, 0.15);
+}
+
+/* =====================================
+   ENCABEZADO
+===================================== */
+
 header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Menú de navegación */
+.site-header {
+    background: linear-gradient(135deg, #e8cce8, #f8dce8);
+    padding: 40px 20px;
+}
+
+.site-header h1 {
+    color: #8e4585;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #805580;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* =====================================
+   MENÚ DE NAVEGACIÓN
+===================================== */
+
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 nav li {
-    display: inline;
-    margin-right: 15px;
+    display: inline-block;
+    margin: 10px;
 }
 
 nav a {
     text-decoration: none;
-    color: #0066cc;
+    color: #9b59b6;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Secciones de contenido */
-section {
-    background-color: #e2bfe0;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #dddddd;
+nav a:hover {
+    color: #d63384;
 }
 
-p {
-    color: #222222;
-    margin-right: 15px;
+/* =====================================
+   IMAGEN PERSONAL
+===================================== */
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-/* Imágenes */
 img {
     display: block;
-    margin: 10px 0;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 4px solid #ead5ea;
+    box-shadow: 0 5px 15px rgba(180, 120, 180, 0.2);
 }
 
-/* Pie de página */
-footer {
+/* =====================================
+   FRASE PRINCIPAL
+===================================== */
+
+.intro {
     text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666666;
+    padding: 25px;
 }
+
+.intro h2 {
+    color: #c05b91;
+    font-size: 28px
