@@ -1,4 +1,7 @@
 /*reset*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -14,9 +17,12 @@
     --bg_header: #FBF6E3;
     --stroke: #E9BA98;
     --primary: #D0C3CF;
-    --font_principal: "Inter", sans-serif;
     --white: #fff;
     --black: #000;
+
+    /*Typography*/
+
+    --font_principal: "DM Sans", sans-serif;
 
     /* Spacers*/
 
@@ -47,6 +53,10 @@ body{
     padding: var(--s32);
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .site-header h1{}
@@ -73,11 +83,27 @@ body{
 }
 
 .main-content{
-    width: 1200px;
-    margin: 0 auto;
-    padding: var(--s32);
+    margin-top: 117px;
+    background: url("../images/fondo_pagina.png") fixed;
+    /*background-repeat: repeat;*/
+    /*background-position: 100px 10px; para poner en una posición específica*/
+    /*background-size: 180px 180px;*/
+    /*background-size: contain; cover cubre todo el fondo de pantalla*/
+    /*background-attachment: fixed; para que el fondo esté fijo en relación a la posición del scroll*/
 }
 
-.main-content .students-section {
+.main-content section{
+    margin: 0 auto;
+    width: 1200px;
+    background: var(--white);
+    padding: var(--s32);
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+}
 
+
+.main-content .course-description {
+    height: 683px;
+    background: var(--stroke);
+    
 }
