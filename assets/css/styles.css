@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* =====================================================
+   RESET
+===================================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   VARIABLES (mismos nombres que en Figma:
+   las "/" de Figma se escriben como "-")
+===================================================== */
+:root{
+
+    /* ---------- colors (primitivos) ---------- */
+    --white: #FFFFFF;
+
+    --gray-100: #F4F4F6;
+    --gray-200: #E5E5EB;
+    --gray-400: #9A9AA6;
+    --gray-700: #40404D;
+    --gray-900: #14141A;
+
+    --blue-50:  #EAF1F9;
+    --blue-100: #CCDDF0;
+    --blue-200: #99BBE0;
+    --blue-300: #6697CC;
+    --blue-400: #3374B8;
+    --blue-500: #0B5BA6;
+    --blue-600: #004C8F;
+    --blue-700: #003A75;   /* Azul UCB */
+    --blue-800: #002C59;
+    --blue-900: #001D3B;
+
+    --yellow-50:  #FFF9E0;
+    --yellow-100: #FEF0B3;
+    --yellow-200: #FDE380;
+    --yellow-300: #FDD84D;
+    --yellow-400: #FCCF26;
+    --yellow-500: #FCC806; /* Amarillo UCB */
+    --yellow-600: #D9A900;
+    --yellow-700: #A88300;
+    --yellow-800: #7A5F00;
+    --yellow-900: #4D3C00;
+
+    /* ---------- spaces (múltiplos de 8) ---------- */
+    --s8: 8px;
+    --s16: 16px;
+    --s24: 24px;
+    --s32: 32px;
+    --s40: 40px;
+    --s48: 48px;
+    --s56: 56px;
+    --s64: 64px;
+    --s72: 72px;
+
+    /* ---------- typography ---------- */
+    /* familias */
+    --space-grotesk-heading-family: 'Space Grotesk', sans-serif;
+    --inter-body-family: 'Inter', sans-serif;
+
+    /* tamaños */
+    --space-grotesk-display-3xl: 49px;
+    --space-grotesk-h1-2xl: 39px;
+    --space-grotesk-logo-xl: 31px;
+    --space-grotesk-h2-xl: 31px;
+    --space-grotesk-h3-lg: 25px;
+    --space-grotesk-avatar-md: 20px;
+    --inter-lead-md: 20px;
+    --inter-body-base: 16px;
+    --inter-caption-xs: 13px;
+
+    /* pesos */
+    --space-grotesk-weight-bold: 700;
+    --space-grotesk-weight-medium: 500;
+    --inter-weight-medium: 500;
+    --inter-weight-regular: 400;
+
+    /* interlineados */
+    --space-grotesk-display-line-height: 56px;
+    --space-grotesk-h1-line-height: 48px;
+    --space-grotesk-logo-line-height: 40px;
+    --space-grotesk-h2-line-height: 40px;
+    --space-grotesk-h3-line-height: 32px;
+    --space-grotesk-avatar-line-height: 30px;
+    --inter-lead-line-height: 30px;
+    --inter-body-line-height: 24px;
+    --inter-caption-line-height: 20px;
+
+    /* ---------- semantics ---------- */
+    /* fondos */
+    --background-page: var(--white);
+    --background-header: var(--white);
+    --background-section-primary: var(--blue-700);
+    --background-card: var(--white);
+    --background-avatar: var(--blue-50);
+    --background-button: var(--gray-100);
+    --background-button-active: var(--blue-700);
+
+    /* color de marca */
+    --color-primary: var(--blue-700);
+    --color-primary-hover: var(--blue-800);
+    --color-primary-subtle: var(--blue-50);
+    --color-accent: var(--yellow-500);
+    --color-accent-hover: var(--yellow-400);
+    --color-accent-subtle: var(--yellow-50);
+
+    /* textos */
+    --text-primary: var(--gray-900);
+    --text-secondary: var(--gray-700);
+    --text-tertiary: var(--gray-400);
+    --text-on-active: var(--white);
+    --text-on-primary: var(--white);
+    --text-on-primary-muted: var(--blue-100);
+    --text-on-accent: var(--blue-900);
+    --text-accent-on-primary: var(--yellow-500);
+    --text-avatar: var(--blue-700);
+    --text-link: var(--blue-600);
+
+    /* bordes */
+    --border-default: var(--gray-200);
+    --border-hover: var(--yellow-500);
+    --border-accent: var(--yellow-500);
+    --border-width: 1px;
+
+    /* espaciados y radios */
+    --padding-page-x: var(--s48);
+    --padding-header-y: var(--s16);
+    --padding-section-y: var(--s72);
+    --padding-button-x: var(--s16);
+    --padding-button-y: var(--s8);
+    --padding-card: var(--s16);
+    --gap-nav: var(--s8);
+    --gap-grid: var(--s16);
+    --radius-button: var(--s8);
+    --radius-card: var(--s16);
+
+    /* ---------- layout (solo CSS, medidas del Figma) ---------- */
+    --container-max: 1211px;   /* ancho de las secciones */
+    --header-height: 76px;     /* 16 + 40 + 16 + 4 de borde */
+    --card-width: 437px;       /* tarjeta de estudiante */
+}
+
+
+/* =====================================================
+   BASE
+===================================================== */
+html{
+    scroll-behavior: smooth;                    /* scroll suave al usar el menú */
+    scroll-padding-top: var(--header-height);   /* que el header no tape el título */
+}
+
+body{
+    background-color: var(--background-page);
+    font-family: var(--inter-body-family);
+    font-size: var(--inter-body-base);
+    font-weight: var(--inter-weight-regular);
+    line-height: var(--inter-body-line-height);
+    color: var(--text-primary);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   ESTILOS DE TEXTO (igual que los estilos de Figma)
+===================================================== */
+
+/* Heading/Logo */
+.site-header h1 {
+    font-family: var(--space-grotesk-heading-family);
+    font-size: var(--space-grotesk-logo-xl);
+    font-weight: var(--space-grotesk-weight-bold);
+    line-height: var(--space-grotesk-logo-line-height);
+}
+
+/* Heading/H2 */
+.section-header h2 {
+    font-family: var(--space-grotesk-heading-family);
+    font-size: var(--space-grotesk-h2-xl);
+    font-weight: var(--space-grotesk-weight-medium);
+    line-height: var(--space-grotesk-h2-line-height);
+}
+
+/* Heading/H3 */
+.student-info h3 {
+    font-family: var(--space-grotesk-heading-family);
+    font-size: var(--space-grotesk-h3-lg);
+    font-weight: var(--space-grotesk-weight-medium);
+    line-height: var(--space-grotesk-h3-line-height);
+}
+
+/* Text/Lead */
+.course-description .section-content p:first-child,
+.students-section .section-header p,
+.course-info p,
+.student-arrow {
+    font-size: var(--inter-lead-md);
+    line-height: var(--inter-lead-line-height);
+}
+
+/* Text/Caption */
+.footer-bottom p {
+    font-size: var(--inter-caption-xs);
+    line-height: var(--inter-caption-line-height);
+}
+
+/* UI/Label */
+.button {
+    font-size: var(--inter-body-base);
+    font-weight: var(--inter-weight-medium);
+    line-height: var(--inter-body-line-height);
+}
+
+/* UI/Link small */
+.student-cta {
+    font-size: var(--inter-caption-xs);
+    font-weight: var(--inter-weight-medium);
+    line-height: var(--inter-caption-line-height);
+}
+
+/* UI/Avatar */
+.student-avatar {
+    font-family: var(--space-grotesk-heading-family);
+    font-size: var(--space-grotesk-avatar-md);
+    font-weight: var(--space-grotesk-weight-medium);
+    line-height: var(--space-grotesk-avatar-line-height);
+}
+
+
+/* =====================================================
+   CABECERA
+===================================================== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-header-y) var(--padding-page-x);
+    background-color: var(--background-header);
+    border-bottom: 4px solid var(--border-accent);
+}
+
+.site-header h1 {
+    color: var(--text-primary);
+}
+
+
+/* =====================================================
+   MENÚ PRINCIPAL (Nav pill)
+===================================================== */
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: var(--gap-nav);
+}
+
+/* State=Default */
+.menu-item a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-button-y) var(--padding-button-x);
+    border-radius: var(--radius-button);
+    background-color: var(--background-button);
+    font-size: var(--inter-body-base);
+    font-weight: var(--inter-weight-regular);
+    line-height: var(--inter-body-line-height);
+    color: var(--text-secondary);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* State=Hover */
+.menu-item a:hover {
+    background-color: var(--border-default);
+    color: var(--text-primary);
+}
+
+/* State=Active */
+.menu-item a[aria-current="location"] {
+    background-color: var(--background-button-active);
+    color: var(--text-on-active);
+    font-weight: var(--inter-weight-medium);
+}
+
+
+/* =====================================================
+   BOTONES (componente Button)
+===================================================== */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s8);
+    align-self: flex-start;          /* no se estira dentro de columnas flex */
+    padding: var(--padding-button-y) var(--s24);
+    border-radius: var(--radius-button);
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Variant=Accent */
+.button-accent {
+    background-color: var(--color-accent);
+    color: var(--text-on-accent);
+}
+.button-accent:hover  { background-color: var(--color-accent-hover); }
+.button-accent:active { background-color: var(--yellow-600); }
+
+/* Variant=Secondary */
+.button-secondary {
+    background-color: var(--background-card);
+    border: var(--border-width) solid var(--border-default);
+    color: var(--color-primary);
+}
+.button-secondary:hover {
+    background-color: var(--color-primary-subtle);
+    border-color: var(--border-hover);
+}
+.button-secondary:active { background-color: var(--blue-100); }
+
+
+/* =====================================================
+   LÍNEA DE ACENTO BAJO LOS TÍTULOS
+===================================================== */
+.section-header h2::after {
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: var(--s8);
+    border-radius: 2px;
+    background-color: var(--color-accent);
+}
+
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+===================================================== */
+.main-content {
+    /* baja el contenido para que el header fijo no lo tape */
+    padding-top: var(--header-height);
+
+    /* patrón de puntos UCB de fondo */
+    background-color: var(--background-page);
+    background-image: url("../images/patron.svg");
+    background-repeat: repeat;
+}
+
+/* las secciones van centradas a 1211px */
+.course-description,
+.students-section,
+.course-extra {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   SOBRE LA MATERIA
+===================================================== */
+.course-description {
+    padding: var(--padding-section-y) var(--padding-page-x);
+    background-color: var(--background-section-primary);
+}
+
+/* título y contenido centrados en una columna de 760px */
+.course-description .section-header,
+.course-description .section-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.course-description .section-header {
+    margin-bottom: var(--s24);
+}
+
+.course-description h2 {
+    color: var(--text-accent-on-primary);
+}
+
+.course-description h2::after {
+    width: 64px;
+    margin-top: var(--s24);
+}
+
+.course-description .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s24);
+}
+
+.course-description .section-content p:first-child {
+    color: var(--text-on-primary);
+}
+
+.course-description .section-content p:nth-child(2) {
+    color: var(--text-on-primary-muted);
+}
+
+
+/* =====================================================
+   ESTUDIANTES
+===================================================== */
+.students-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s32);
+    padding: var(--padding-section-y) var(--padding-page-x);
+    background-color: var(--background-page);
+}
+
+.students-section .section-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s8);
+}
+
+.students-section h2 {
+    color: var(--text-primary);
+}
+
+.students-section h2::after {
+    width: 135px;
+}
+
+.students-section .section-header p {
+    color: var(--text-secondary);
+}
+
+/* grilla de 2 columnas de 437px */
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(2, var(--card-width));
+    gap: var(--gap-grid);
+}
+
+
+/* ---------- Tarjeta de estudiante (Student card) ---------- */
+/* State=Default */
+.student-link {
+    display: flex;
+    align-items: center;
+    gap: var(--s16);
+    height: 80px;
+    padding: var(--padding-card);
+    border: var(--border-width) solid var(--border-default);
+    border-radius: var(--radius-card);
+    background-color: var(--background-card);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.student-avatar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--background-avatar);
+    color: var(--text-avatar);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.student-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.student-info h3 {
+    color: var(--text-primary);
+}
+
+.student-cta {
+    color: var(--text-link);
+}
+
+.student-arrow {
+    color: var(--text-tertiary);
+    transition: color 0.15s ease;
+}
+
+/* State=Hover  (borde de 2px sin mover el contenido) */
+.student-link:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 0 0 1px var(--border-hover);
+}
+
+.student-link:hover .student-avatar {
+    background-color: var(--color-primary);
+    color: var(--text-accent-on-primary);
+}
+
+.student-link:hover .student-arrow {
+    color: var(--color-primary);
+}
+
+/* State=Active  (mientras se presiona) */
+.student-link:active {
+    background-color: var(--color-accent-subtle);
+    border-color: var(--border-accent);
+    box-shadow: 0 0 0 1px var(--border-accent);
+}
+
+
+/* =====================================================
+   PROYECTO + RECURSOS (lado a lado)
+===================================================== */
+.course-extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s24);
+    padding: var(--s24) var(--padding-page-x) var(--padding-section-y);
+    background-color: var(--background-page);
+}
+
+.course-info,
+.resources-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s24);
+    padding: var(--s40);
+    border-radius: var(--radius-card);
+}
+
+.course-extra h2 {
+    color: var(--text-primary);
+}
+
+/* ---------- Proyecto del semestre ---------- */
+.course-info {
+    background-color: var(--yellow-100);
+}
+
+.course-info h2::after {
+    width: 167px;
+    background-color: var(--color-primary);   /* línea azul sobre el amarillo */
+}
+
+.course-info p {
+    color: var(--text-primary);
+}
+
+/* ---------- Recursos ---------- */
+.resources-section {
+    background-color: var(--blue-100);
+}
+
+.resources-section .section-header h2 {
+    display: inline-block;   /* la línea mide lo mismo que el título */
+}
+
+.resources-section h2::after {
+    width: 100%;
+}
+
+.resources-list {
+    list-style: none;
+}
+
+.resources-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--s16);
+    padding: 12px 0;
+    color: var(--text-primary);
+}
+
+/* viñeta amarilla */
+.resources-list li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+}
+
+
+/* =====================================================
+   PIE DE PÁGINA
+===================================================== */
+.site-footer {
+    padding: 0 var(--padding-page-x) var(--s24);
+    background-color: var(--background-section-primary);
+    border-top: 4px solid var(--border-accent);
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--s24);
+    border-top: var(--border-width) solid var(--blue-800);
+}
+
+.footer-bottom p {
+    color: var(--text-on-primary-muted);
+}
+
+/* "Volver arriba": botón secundario con fondo gris (como en Figma) */
+.back-to-top {
+    background-color: var(--gray-200);
+}
