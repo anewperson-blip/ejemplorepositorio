@@ -47,7 +47,7 @@
   }
    
   body {
-    min-width: 1280px; /* solo escritorio */
+    min-width: 1280px;
     background: var(--blanco);
     color: var(--blanco);
     font-family: var(--fuente-texto);
@@ -244,10 +244,9 @@
   .marco-grupo:nth-of-type(2) .barra {
     width: 7.7rem;
     margin-left: 1.2rem;
-    border-color: #cdeedd; /* borde más suave, como en el diseño */
+    border-color: #cdeedd; 
   }
    
-  /* ---------- Sobre mí ---------- */
   .sobre-mi {
     display: flex;
     justify-content: center;
