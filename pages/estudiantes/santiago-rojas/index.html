@@ -1,85 +1,110 @@
-<!-- =====================================================C
-         Solo modificar esta pagina
-    ====================================================== -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>santiago-rojas</title>
-    <link rel="stylesheet" href="../../../assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Palomoide | Santiago Rojas Bejarano</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- =====================================================C
-         Presentacion
-        ====================================================== -->
-        <header class="site-header">
-            <h1>Taller de Diseño Digital 1</h1>
-            <nav class="main-navigation" aria-label="Navegacion Principal">
-                <ul class="main-menu">
-                    <li class="menu-item">
-                        <a href="#inicio">Inicio</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#estudiantes">Estudiantes</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#proyecto">Proyectos</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#recursos">Recursos</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <!-- =====================================================C
-             Sobre Mi
-            ====================================================== -->
-            <section>
-                <h1>Mi Primera Pagina Web :O</h1>
-            <img src="/pages/estudiantes/santiago-rojas/imagenes/IMG_9444 (2).png" alt="Imagen de Santiago Rojas" width="350" height="400">
-            <p><b>Santiago Gael Rojas Bejarano</b><br>Estudiante de Diseño Digital | Ilustrador</p>
-            <p>"El Amor sera lo unico que me dara las fuerzas para seguir adelante"<br><i>-Yo bien reflexivo a las 3:00 AM</i></p>
-            <nav>
-                <ul>
-                    <li><a href="https://github.com/santiagorojasb-cmyk">Enlace a cuenta de GitHub</a></li>
-                    <li><a href="https://www.instagram.com/p4lomoide_art/">Cuenta de Instagram</a></li>
-                </ul>
-            </nav>
-            </section>
-            <section>
-                <h2>Sobre mi:</h2>
-                <p>Soy estudiante de <span style="color: crimson;">Diseño Digital</span> e <span style="color: crimson;">Ilustrador </span>
-                 <span style="color: darkblue;">Digital</span> y <span style="color: darkblue;">Tradicional</span>, interesado sobre todo en ser ilustrador profesional y artista conceptual.
-                 Vivo en La Paz, Bolivia.</p>
-            </section>
-            <!-- =====================================================C
-             Gustos e Intereses
-            ====================================================== -->
-            <div>
-                <h3>Gustos e Intereses</h3>
-                <ul>
-                    <li>El dibujo</li>
-                    <li>La danza Folklorica</li>
-                    <li>El genero de "Fantasia Oscura"</li>
-                    <li>El manga</li>
-                </ul>
-            </div>
-            <!-- =====================================================C
-              Algo que me inspira
-            ====================================================== -->
-            <div>
-                <h3>Inspiracion</h3>
-                <p><b>Mi Papá y Mamá</b></p>
-                <img src="https://i.pinimg.com/736x/dd/8d/73/dd8d7335143c88652ed61fa87f35babb.jpg" alt="Padres" width="250" height="400">
-                <p>Ellos lo han dado todo para darme la vida que ellos no tuvieron. Por eso tengo que darlo todo, para poder honrar todo lo que hacen por mi</p>
-            </div>
-            <footer>
-                <p>&copy; 2024 Santiago Rojas Bejarano. Todos los derechos reservados.</p>
-            </footer>
-        </main>
+
+  <header class="hero">
+    <div class="hero__bloque">
+      <p class="hero__saludo">Hola, soy Santiago Gael Rojas Bejarano, pero tambien me llamo</p>
+      <h1 class="hero__titulo">El PalomoiDe</h1>
+      <div class="hero__roles">
+        <span>Estudiante de Diseño Digital</span>
+        <span>Ilustrador</span>
+      </div>
+      <nav class="hero__enlaces" aria-label="Redes">
+        <a href="https://github.com/santiagorojasb-cmyk" target="_blank" rel="noopener">Github</a>
+        <a href="https://www.instagram.com/p4lomoide_art/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <div class="fondo-x">
+
+      <section class="presentacion">
+        <blockquote class="cita">
+          <p>"El Amor sera lo unico que me dara las fuerzas para seguir adelante"</p>
+          <footer>-Yo a las 3:00 AM</footer>
+        </blockquote>
+
+        <div class="marco-grupo">
+          <div class="marco marco--logo">
+            <img src="img/logo-grid.jpg" alt="Cuatro versiones del logo de El Palomoide en distintos colores">
+          </div>
+          <div class="barra" aria-hidden="true"></div>
+        </div>
+
+        <div class="marco-grupo">
+          <div class="marco marco--foto">
+            <img src="img/foto-santiago.jpg" alt="Santiago bebiendo de un vaso frente a una pizarra con letras">
+          </div>
+          <div class="barra" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="sobre-mi">
+        <div class="caja">
+          <div class="caja__contenido">
+            <h2 class="caja__titulo">Sobre mi</h2>
+            <p class="caja__texto">Vivo en La Paz, Bolivia. Soy estudiante de Diseño Digital e Ilustrador Digital y Tradicional, interesado sobre todo en ser ilustrador profesional y artista conceptual.</p>
+          </div>
+          <div class="caja__barra" aria-hidden="true"></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="brillo" aria-hidden="true"></div>
+
+    <section class="gustos">
+      <h2 class="titulo-seccion">Gustos e Intereses</h2>
+      <ul class="gustos__lista">
+        <li class="tarjeta">
+          <img src="img/ilustracion.jpg" alt="Ilustración de una figura con corona y espada en tonos azules y violetas">
+          <span>La ilustracion</span>
+        </li>
+        <li class="tarjeta">
+          <img src="img/danza.jpg" alt="Traje de diablada boliviana con chispas doradas">
+          <span>Danza Folklorica</span>
+        </li>
+        <li class="tarjeta">
+          <img src="img/scouts.jpg" alt="Manos unidas con pañoletas scout de colores">
+          <span>Los Scouts</span>
+        </li>
+        <li class="tarjeta">
+          <img src="img/fantasia.jpg" alt="Ilustración de fantasía oscura con un guerrero dorado entre esqueletos">
+          <span>La Fantasia Oscura</span>
+        </li>
+        <li class="tarjeta">
+          <img src="img/manga.jpg" alt="Ilustración de manga con dos personajes bajo la lluvia">
+          <span>El Manga</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="inspiracion">
+      <h2 class="titulo-seccion titulo-seccion--oscuro">Inspiracion</h2>
+      <div class="inspiracion__padres">
+        <figure class="padre">
+          <figcaption>Mamá</figcaption>
+          <img class="padre__img padre__img--mama" src="img/mama.jpg" alt="Pintura al óleo de una madre abrazando a su hija">
+        </figure>
+        <figure class="padre">
+          <figcaption>Papá</figcaption>
+          <img class="padre__img padre__img--papa" src="img/papa.jpg" alt="Pintura al óleo de un padre caminando con su hijo junto al agua">
+        </figure>
+      </div>
+      <p class="inspiracion__texto">Ellos lo han dado todo para darme la vida que ellos no tuvieron. Por eso tengo que darlo todo, para poder honrar todo lo que hacen por mi</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>© 2024 Santiago Rojas Bejarano. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>

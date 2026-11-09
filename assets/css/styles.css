@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800;900&display=swap');
+
 /*reset*/
 
 *{
@@ -12,9 +14,14 @@
     --bg_header:#DFE5E3; 
     --stroke:#3D8EFF; 
     --primary:#FED257;
-    --font_principal: "Arial", sans-serif;
     --white:#ffffff;
     --black:#000;
+
+    /*TYPOGRAPHY*/
+
+    --font_principal: "Monserrat Alternates", sans-serif;
+    --title_SM: 25px;
+    
 
     /*SPACERS*/
 
@@ -47,6 +54,10 @@ body{
     padding: var(--s32);
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 
 .site-header h1{}
@@ -70,7 +81,73 @@ body{
 }
 
 .main-content{
-    width: 1200px;
-    margin: 0 auto;
-    padding: var(--s32);
+    padding-top: 117px;
+    background: url("../css/images/Img1.png")fixed; /*no-repeat 180px 180px cover;*/
+    /*background-repeat: ;*/
+    /*background-position: 10px 10px;*/
+    /*background-position-x: ;x:10px;*/
+    /*background-size:180px 180px ;*/
 }
+
+.main-content section{
+    width: 1200px;
+    background: var(--white);
+    padding: var(--s32);
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+    margin: 0 auto;
+}
+
+.main-content .course-description{
+    height: 683px;
+    background-color: var(--stroke);
+    color:var(--white)
+}
+
+.course-description div{
+
+    display: flex;
+    flex-direction: column;
+    gap:var(--s16);
+}
+
+.students-grid{
+    display: flex;
+    flex-wrap: wrap; 
+    gap: var(--s24);
+    justify-content: space-between;
+}
+
+.students-grid .student-card{
+    border:1px solid var(--bg_header);
+    border-radius:var(--s16);
+    overflow: hidden;
+}
+
+.students-grid .student-card a{
+   width: 263px;
+   height: 110px;
+   padding: var(--s24);
+   transition: all 300ms;
+   color:var(--black);
+   background: url(../css/images/iconoir_arrow-left-circle.svg)no-repeat 203px center;
+   background-size: 24px 24px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.students-grid .student-card a:hover{
+    background: var(--primary)url(../css/images/iconoir_arrow-left-circle.svg)no-repeat 203px center;;
+    
+}
+.students-grid .students-card h3{
+    font-size: var(--title_SM);
+    width: 179px;
+}
+
+/* * /*
+/* etiqueta /*
+/* clase /*
+/* id /*
+/* pseudoclase /*
