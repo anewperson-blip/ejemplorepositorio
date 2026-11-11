@@ -1,70 +1,113 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriela Yugar</title>
-    <style>
-        body{background-color: #c5f1f3;}
-        a {color: #1b2766;}
-        h1 {color: #293277;}
-        h2 {color: #293277;}
-        footer {color: #0a76a8;
-                font-weight: bold;}
-    </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-    <header>
-        <h1>La vie d'une jeune femme</h1>
-        <img src="imagenes/IMG_4693.jpg" alt="Gabriela Yugar" width="20%">
-        <h2>Gabriela Yugar Rosales</h2>
-        <p>Diseño, danza, viajes y pequeñas cosas que me inspiran.</p>
-        <a href="https://github.com/gabrielaxyugar"  target="_blank">Mi Github</a>
+    <header class="portada" id="inicio">
+        <nav class="navegacion">
+            <div>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#intereses">Intereses</a>
+                <a href="#inspiracion">Inspiración</a>
+            </div>
+        </nav>
+
+        <div class="portada-contenido">
+            <div class="portada-texto">
+                <p class="etiqueta">UN PEQUEÑO ESPACIO PERSONAL</p>
+                <h1>La vie d'une jeune femme.</h1>
+                <h2>Gabriela Yugar Rosales</h2>
+                <a class="enlace" href="#sobre-mi">Conóceme ↓</a>
+            </div>
+            
+            <img src="imagenes/IMG_4693.jpg" alt="Gabriela Yugar">
+            <p>Diseño, danza, viajes y pequeñas cosas que me inspiran.</p>
+        </div>
     </header>
-  
 
     <main>
-        <section>
-            <h2>Sobre mi:</h2>
-            <p>Mi nombre es Gabriela Yugar Rosales. Soy una apasionada por el diseño en general y sus diferentes ramas. Me interesa explorar nuevas formas de expresión y crear soluciones innovadoras.</p>
+        <section class="sobre-mi seccion" id="sobre-mi">
+            <p class="etiqueta">SOBRE MÍ</p>
+            <h2>Hola, soy Gabriela.</h2>
+
+            <p class="descripcion">
+                Soy una apasionada por el diseño en general y sus
+                diferentes ramas. Me interesa explorar nuevas formas
+                de expresión, descubrir nuevas perspectivas y crear
+                soluciones que comuniquen ideas.
+            </p>
+
+            <p class="descripcion">
+                Actualmente estudio Diseño y disfruto encontrar
+                inspiración en el arte, la cultura, los viajes y
+                las experiencias que forman parte de mi vida.
+            </p>
         </section>
 
 
-        <section>
-            <h2>Información personal:</h2>
-            <ul>
-                <li>Edad: 20 años</li>
-                <li>Ciudad: La Paz, Bolivia</li>
-                <li>Correo electrónico: gabrielaxyugar@gmail.com</li>
-            </ul>
-        </section>
+       
+<section class="intereses">
+    <h2>Mis intereses:</h2>
+
+    <div class="contenedor-intereses">
+
+        <div class="interes">
+            <img src="imagenes/DISEÑO.PNG" alt="Diseño">
+            <h3>Diseño</h3>
+            <p>Me gusta explorar nuevas formas de expresión.</p>
+        </div>
+
+        <div class="interes">
+            <img src="imagenes/DANZA.jpeg" alt="Danza">
+            <h3>Danza</h3>
+            <p>Una forma de expresarme y conectar conmigo misma.</p>
+        </div>
+
+        <div class="interes">
+            <img src="imagenes/VIAJE.jpeg" alt="Viajes">
+            <h3>Viajes</h3>
+            <p>Conocer lugares y descubrir nuevas experiencias.</p>
+        </div>
+
+    </div>
+</section>
 
 
-        <section>
-            <h2>Mis intereses:</h2>
-            <ul>
-                <li>Danza</li>
-                <li>Lectura</li>
-                <li>Idiomas</li>
-            </ul>
+
+        <section class="inspiracion seccion" id="inspiracion">
+            <p class="etiqueta">UNA FORMA DE VER EL MUNDO</p>
+
+            <div class="inspiracion-contenido">
+                <div>
+                    <h2>La tranquilidad dentro del caos.</h2>
+                    <p>
+                        Encuentro inspiración en aquellos momentos en
+                        los que puedo detenerme y observar lo que sucede
+                        a mi alrededor, incluso cuando todo parece estar
+                        lleno de movimiento.
+                    </p>
+                </div>
+
+                <img src="imagenes/PAISAJE.jpeg" alt="Paisaje que representa mi inspiración">
+            </div>
         </section>
 
-        <section>
-            <h2>Algo que me inspira:</h2>
-            <p>La tranquilidad dentro del caos</p>
-            <img src=" " alt="Inspiración" width="200" height="200">
-            <p> Encuentro inspiración en aquellos momentos en los que puedo detenerme y observar lo que sucede a mi alrededor, incluso cuando todo parece estar lleno de movimiento. </p>
-        </section>
     </main>
 
-<footer>
-    <p>© 2026 Gabriela Yugar Rosales</p> 
-</footer>
 
-
-    
-
-    
+    <footer>
+        <p>GABRIELA YUGAR ROSALES</p>
+        <a href="https://github.com/gabrielaxyugar" target="_blank">
+            Mi Github ↗
+        </a>
+        <p>© 2026</p>
+    </footer>
 
 </body>
 </html>
