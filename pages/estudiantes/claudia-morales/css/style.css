@@ -1,0 +1,333 @@
+
+/* TIPOGRAFÍAS */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+/* RESETEO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* VARIABLES */
+:root {
+
+    /* COLORES */
+    --plum: #32113D;
+    --purple: #57205F;
+    --cherry: #941D46;
+    --raspberry: #B84A70;
+    --lavender: #A98AC8;
+    --lilac: #E9DCE9;
+    --cream: #F4EBDD;
+    --dark: #29212C;
+    --white: #FFFFFF;
+
+    /* TIPOGRAFÍAS */
+    --font-title: "Cormorant Garamond", serif;
+    --font-body: "Montserrat", sans-serif;
+
+    /* ESPACIADOS */
+    --s8: 8px;
+    --s16: 16px;
+    --s24: 24px;
+    --s32: 32px;
+    --s48: 48px;
+    --s64: 64px;
+}
+
+
+/* ESTILOS GENERALES */
+body {
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+
+    background-image:
+        radial-gradient(circle at 5% 15%, rgba(169,138,200,0.13), transparent 25%),
+        radial-gradient(circle at 95% 50%, rgba(148,29,70,0.08), transparent 30%);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* NAVEGACIÓN */
+body > header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 7%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav {
+    display: flex;
+    gap: var(--s16);
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--plum);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 30px;
+    transition: 300ms;
+}
+
+nav a:hover {
+    background-color: var(--cherry);
+    color: var(--white);
+}
+
+
+/* CONTENIDO PRINCIPAL */
+main {
+    width: 100%;
+}
+
+
+/* PRESENTACIÓN */
+.presentacion {
+    min-height: 100vh;
+    padding: 150px 8% 80px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        radial-gradient(ellipse at 85% 40%, rgba(169,138,200,0.28), transparent 35%),
+        radial-gradient(ellipse at 10% 90%, rgba(148,29,70,0.13), transparent 30%);
+}
+
+
+/* LÍNEAS DECORATIVAS */
+.presentacion::before {
+    content: "";
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    border: 2px solid rgba(87,32,95,0.25);
+    border-radius: 42% 58% 63% 37% / 49% 38% 62% 51%;
+
+    top: 10%;
+    right: -15%;
+
+    transform: rotate(-30deg);
+    pointer-events: none;
+}
+
+.presentacion::after {
+    content: "";
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    border: 2px solid rgba(148,29,70,0.35);
+    border-radius: 60% 40% 35% 65% / 40% 60% 40% 60%;
+
+    bottom: -35%;
+    left: -12%;
+
+    transform: rotate(35deg);
+    pointer-events: none;
+}
+
+
+/* TÍTULO PRINCIPAL */
+.section-header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--s32);
+}
+
+.presentacion .section-header h2 {
+    font-family: var(--font-title);
+    font-size: clamp(65px, 9vw, 130px);
+    font-weight: 700;
+    line-height: 0.9;
+    color: var(--plum);
+    letter-spacing: -4px;
+}
+
+
+/* CONTENIDO DE PRESENTACIÓN */
+.presentacion .section-content {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: minmax(250px, 0.9fr) minmax(280px, 1.1fr);
+    align-items: center;
+    gap: var(--s24) 8%;
+}
+
+
+/* FOTOGRAFÍA */
+.presentacion .section-content img {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    border-radius: 48% 52% 35% 65% / 40% 35% 65% 60%;
+
+    border: 5px solid var(--white);
+
+    box-shadow: 15px 20px 0 rgba(148,29,70,0.15);
+}
+
+
+/* TEXTOS */
+.presentacion .section-content p {
+    grid-column: 2;
+    color: var(--dark);
+    font-size: 17px;
+    max-width: 550px;
+}
+
+.presentacion .section-content p:first-of-type {
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--purple);
+}
+
+.presentacion .section-content a {
+    grid-column: 2;
+    justify-self: start;
+
+    background-color: var(--cherry);
+    color: var(--white);
+
+    padding: 13px 25px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 300ms;
+}
+
+.presentacion .section-content a:hover {
+    background-color: var(--plum);
+    transform: translateY(-4px);
+}
+
+
+/* RESTO DE SECCIONES */
+main section:not(.presentacion) {
+    position: relative;
+    padding: 90px 10%;
+    margin: 0;
+
+    border-radius: 80px 0 80px 0;
+}
+
+main section:not(.presentacion) .section-header h2 {
+    font-family: var(--font-title);
+    font-size: 55px;
+    color: var(--plum);
+    line-height: 1;
+}
+
+main section:not(.presentacion) .section-header {
+    margin-bottom: var(--s48);
+}
+
+
+/* SOBRE MÍ */
+.sobre-mi {
+    background-color: var(--lilac);
+    border-radius: 100px 0 100px 0;
+}
+
+
+/* GUSTOS */
+.gustos {
+    background-color: var(--cream);
+}
+
+.gustos ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s24);
+    padding: 0;
+}
+
+.gustos li {
+    list-style: none;
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 18px 30px;
+    border-radius: 40px 10px 40px 10px;
+}
+
+
+/* INSPIRACIÓN */
+.inspiration-collage {
+    display: grid;
+
+    /* Cuatro columnas del mismo tamaño */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* Separación pequeña entre las imágenes */
+    gap: 8px;
+
+    width: 100%;
+    margin-top: 35px;
+}
+
+/* Estilo general de las cuatro imágenes */
+.inspiration-collage img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    /* Evita que las imágenes se deformen */
+    display: block;
+}
+
+/* Formas orgánicas diferentes */
+.inspiration-collage img:nth-child(1) {
+    border-radius: 48% 52% 35% 65% / 40% 45% 55% 60%;
+}
+
+.inspiration-collage img:nth-child(2) {
+    border-radius: 35% 65% 55% 45% / 55% 40% 60% 45%;
+}
+
+.inspiration-collage img:nth-child(3) {
+    border-radius: 60% 40% 45% 55% / 40% 60% 40% 60%;
+}
+
+.inspiration-collage img:nth-child(4) {
+    border-radius: 45% 55% 65% 35% / 60% 45% 55% 40%;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: var(--plum);
+    color: var(--cream);
+    text-align: center;
+    padding: var(--s32);
+}
+

@@ -1,0 +1,123 @@
+/* ==========================================
+   MI PÁGINA PERSONAL - estilos básicos
+   Colores morados usados:
+   #4b2a7b  morado oscuro
+   #7b4fc9  morado medio
+   #e6d9f7  lila claro
+   #f6f1fc  lila muy claro (fondo)
+   ========================================== */
+
+
+/* ---------- Estilos generales de la página ---------- */
+body {
+    background-color: #f6f1fc;
+    color: #333333;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Caja que centra todo el contenido */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* ---------- Encabezado (título y menú) ---------- */
+.site-header {
+    background-color: #4b2a7b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.site-header h1 {
+    color: white;
+    margin: 0 0 15px 0;
+}
+
+/* Menú de navegación */
+.main-menu {
+    list-style: none;   /* quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    display: inline-block;  /* pone los items uno al lado del otro */
+    margin: 5px;
+}
+
+.menu-item a {
+    background-color: #e6d9f7;
+    color: #4b2a7b;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;  /* quita el subrayado */
+}
+
+/* Cuando pasas el mouse por encima */
+.menu-item a:hover {
+    background-color: #7b4fc9;
+    color: white;
+}
+
+
+/* ---------- Secciones ---------- */
+section {
+    background-color: white;
+    border: 2px solid #e6d9f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Títulos de cada sección */
+h2 {
+    color: #7b4fc9;
+    border-bottom: 3px solid #e6d9f7;
+    padding-bottom: 8px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+
+/* ---------- Imágenes ---------- */
+.main-content img {
+    width: 300px;
+    max-width: 100%;      /* evita que se salga en pantallas pequeñas */
+    border-radius: 10px;
+    display: block;
+    margin: 15px 0;
+}
+
+
+/* ---------- Lista de gustos ---------- */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+/* ---------- Link de GitHub ---------- */
+.presentacion a {
+    background-color: #7b4fc9;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.presentacion a:hover {
+    background-color: #4b2a7b;
+}

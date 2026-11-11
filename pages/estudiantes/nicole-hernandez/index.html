@@ -1,74 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nicole-hernandez</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="site-header">
             <h1>Nicole Hernández</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Presentación</a></li>
-                    <li><a href="#">Sobre mí</a></li>
-                    <li><a href="#">Gustos de interés</a></li>
-                    <li><a href="#">Algo que me inspira</a></li>
+                    <li><a href="#presentacion">Presentación</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#gustos-de-interes">Gustos de interés</a></li>
+                    <li><a href="#algo-que-me-inspira">Algo que me inspira</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <section id="presentacion">
-                <h2>Sobre mí</h2>
-                <img src="ruta-de-tu-imagen.jpg" alt="Foto de Nicole Hernández">
+            <section class="presentacion" id="presentacion">
+             <img src="imagenes/Foto1.JPG" alt="Foto de Nicole Hernández" class="foto" width="200">
+             <div class="presentacion-texto">  
+             <h2>Presentación</h2>
                 <ul>
                     <li>Nombre: Nicole Mariana Hernández Vertiz</li>
                     <li>Frase: "La creatividad es lo que nos diferencia de otros animales."</li>
                     <li>link de GitHub: <a href="https://github.com/nicolehernandez-cell" target="_blank">GitHub</a></li>
                 </ul>
+            </div>   
    
             </section>
 
-            <section id="sobre-mi">
+            <section class="sobre-mi" id="sobre-mi">
                 <h2>Sobre mí</h2>
-                <p>Soy una estudiante de diseño digital con interés en crear experiencias.</p>
-                <p>Me apasiona el diseño gráfico y la ilustración, y siempre estoy buscando nuevas formas de expresarme a través del arte.</p>
+                <p> <b>¿Cómo podría descibirme?</b> Creo que la autopercepción es una de las cualidades más dificiles que una persona podría explicar. Me gustaría empezar describiéndome como una persona curiosa sin más. Me apasiona conocer el mundio y comprenderlo. No quiero ser una persona pasiva que se conforma quejándose de que las cosas están mal. Odio conformarme con aspectos en los que no estoy de acuerdo. Es por eso que me apasiona el arte, siento que a través puedo exponer mis pensamientos sin hacer un revuelo. </p>
             </section>
 
-            <section id="gustos-de-interes">
+            <section class="gustos-de-interes" id="gustos-de-interes">
                 <h2>Gustos de interés</h2>
                 <ul>
-                    <li>Diseño gráfico</li>
+                    <li>Diseño</li>
                     <li>Arte y pintura</li>
-                    <li>Conocimiento</li>
+                    <li>Abejas</li>
                     <li>Lectura</li>
                     <li>Filosofía</li>
                 </ul>
             </section>
 
-            <section id="algo-que-me-inspira">
-                <h2>Algo que me inspira</h2>
-                <ul>
-                    <li>El arte y la creatividad de otros artistas como:
-                        <ul>
-                            <li>Wes Anderson</li>
-                            <li>Miguel Alandia Pantoja</li>
-                            <li>Gustav Klimt</li>   
-                        </ul>
-                    </li>
-                    <li>Autores de libros como:
-                        <ul>
-                            <li>George Orwell</li>
-                            <li>Yuval Noah Harari</li>
-                            <li>Isabel Allende</li>
-                        </ul>
-                    </li>
+            <section class="me-inspira" id="algo-que-me-inspira">
+                <section class="inspira-seccion" id="inspira">
+    <h2>Algo que me inspira</h2>
+
+    <div class="inspira-grid">
+      
+        <div class="inspira-card">
+            <span class="inspira-nombre">Wes Anderson</span>
+            <img src="imagenes/Foto2.jpeg" alt="Wes Anderson" class="inspira-img">
+        </div>
+
+        <div class="inspira-card">
+            <span class="inspira-nombre">Miguel Alandia Pantoja</span>
+            <img src="imagenes/Foto3.jpeg" alt="Miguel Alandia Pantoja" class="inspira-img">
+        </div>
+
+        <div class="inspira-card">
+            <span class="inspira-nombre">Gustav Klimt</span>
+            <img src="imagenes/Foto4.jpeg" alt="Gustav Klimt" class="inspira-img">
+        </div>
+
+
+        <div class="inspira-card">
+            <span class="inspira-nombre">Yuval Noah Harari</span>
+            <img src="imagenes/Foto5.jpeg" alt="Yuval Noah Harari" class="inspira-img">
+        </div>
+
+        <div class="inspira-card">
+            <span class="inspira-nombre">George Orwell</span>
+            <img src="imagenes/Foto6.jpeg" alt="George Orwell" class="inspira-img">
+        </div>
+
+        <div class="inspira-card">
+            <span class="inspira-nombre">Isabel Allende</span>
+            <img src="imagenes/Foto7.jpeg" alt="Isabel Allende" class="inspira-img">
+        </div>
+    </div>
             </section>
         </main>
     </div>
-    <footer>
+    <footer class="footer"> 
         <p>&copy; 2024 Nicole Hernández. Todos los derechos reservados.</p>
     </footer>   
 </body>
