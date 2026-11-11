@@ -3,320 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Gael Vadhir Aguilar Barrera</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #111111;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        header {
-            text-align: center;
-            padding: 70px 20px;
-            background-color: #1c1c1c;
-        }
-
-        header img {
-            width: 170px;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 3px solid white;
-        }
-
-        h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            color: #cccccc;
-            font-size: 18px;
-        }
-
-        nav {
-            background-color: #000000;
-            padding: 18px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #888888;
-        }
-
-        main {
-            max-width: 900px;
-            margin: auto;
-        }
-
-        section {
-            padding: 70px 30px;
-            border-bottom: 1px solid #333333;
-        }
-
-        h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #cccccc;
-            font-size: 17px;
-        }
-
-        ul {
-            margin-top: 20px;
-            padding-left: 25px;
-        }
-
-        li {
-            margin: 12px 0;
-            color: #dddddd;
-        }
-
-        .inspiracion {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .inspiracion img {
-            width: 320px;
-            max-width: 100%;
-            border-radius: 15px;
-        }
-
-        .texto-inspiracion {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .github {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: white;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #000000;
-        }
-
-        footer p {
-            font-size: 14px;
-            color: #888888;
-        }
-
-        @media (max-width: 600px) {
-
-            h1 {
-                font-size: 32px;
-            }
-
-            nav a {
-                margin: 0 5px;
-                font-size: 13px;
-            }
-
-            section {
-                padding: 50px 20px;
-            }
-        }
-    </style>
+    <title>Estudiantes | Taller de Diseño Digital 1</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script src="../../assets/js/main.js" defer></script>
 </head>
-
 <body>
+<div class="container">
+<header class="site-header">
 
-    <!-- =====================================
-         1. PRESENTACIÓN
-         ===================================== -->
+        <p class="site-title"><a href="../../index.html">Taller de Diseño Digital 1</a></p>
+     <!-- =====================================================C
+         MENÚ PRINCIPAL
+    ====================================================== -->
+    <button class="menu-toggle" type="button" aria-expanded="true" aria-controls="main-navigation" aria-label="Cerrar menú">
+        <img src="../../assets/images/iconoir_menu.svg" alt="" width="24" height="24">
+    </button>
+    <nav class="main-navigation" id="main-navigation" aria-label="Navegación principal">
 
-    <header id="inicio">
+        <ul class="main-menu">
+            <li class="menu-item">
+                <a href="../../index.html#inicio">Inicio</a>
+            </li>
 
-        <!-- Coloca aquí tu fotografía -->
-        <img src="/Users/clases/Documents/vadhir_aguilar/taller/ejemplorepositorio/pages/estudiantes/8a5374d4-5252-4cce-8ab0-b9db68d48ab0.JPG" alt="Fotografía personal de Gael">
+           <li class="menu-item">
+                <a href="estudiantes.html" aria-current="page">Estudiantes</a>
+            </li>
 
-        <h1>Gael Vadhir Aguilar Barrera</h1>
+            <li class="menu-item">
+                <a href="../../index.html#proyecto">Proyectos</a>
+            </li>
 
-       
-        <a 
-            class="github"
-            href="https://github.com/Vadhir17"
-            target="_blank">
-            Mi perfil de GitHub
-        </a>
-
-    </header>
-
-
-    <!-- =====================================
-         MENÚ DE NAVEGACIÓN
-         ===================================== -->
-
-    <nav>
-
-        <a href="#inicio">Inicio</a>
-
-        <a href="#sobre-mi">Sobre mí</a>
-
-        <a href="#gustos">Gustos e intereses</a>
-
-        <a href="#inspiracion">Inspiración</a>
+            <li class="menu-item">
+                <a href="../recursos/recursos.html">Recursos</a>
+            </li>
+        </ul>
 
     </nav>
 
-
-    <!-- =====================================
-         CONTENIDO PRINCIPAL
-         ===================================== -->
-
-    <main>
+    </header>
+    <main class="main-content">
+        <section class="students-section" id="estudiantes">
 
 
-        <!-- =====================================
-             2. SOBRE MÍ
-             ===================================== -->
 
-        <section id="sobre-mi">
+            <header class="section-header">
 
-            <h2>Sobre mí</h2>
+                <h1>Estudiantes</h1>
 
-            <p>
-                Soy estudiante de Diseño Digital y me interesa todo lo
-                relacionado con la creatividad, la comunicación visual y
-                la tecnología. Me gusta aprender nuevas herramientas y
-                experimentar con diferentes formas de expresar ideas.
-            </p>
+                <p>
+                    Selecciona un estudiante para acceder a su espacio de trabajo.
+                </p>
 
-            <br>
-
-            <p>
-                Me considero una persona creativa, curiosa y perseverante.
-                Disfruto descubrir nuevas formas de crear y mejorar mis
-                habilidades, especialmente en áreas relacionadas con el
-                diseño y los medios digitales.
-            </p>
-
-        </section>
+            </header>
 
 
-        <!-- =====================================
-             3. GUSTOS E INTERESES
-             ===================================== -->
+            <div class="students-grid">
 
-        <section id="gustos">
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="gael-aguilar/index.html" class="student-link">
+                        <h3>Gael Aguilar</h3>
+                    </a>
+                </article>
 
-            <h2>Gustos e intereses</h2>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="nicole-alvarez/index.html" class="student-link">
+                        <h3>Nicole Alvarez</h3>
+                    </a>
+                </article>
 
-            <p>
-                Algunas de las actividades y temas que más me interesan son:
-            </p>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="alejandra-arguedas/index.html" class="student-link">
+                        <h3>Alejandra Arguedas</h3>
+                    </a>
+                </article>
 
-            <ul>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="jhoan-azuga/index.html" class="student-link">
+                        <h3>Jhoan Azuga</h3>
+                    </a>
+                </article>
 
-                <li>Diseño gráfico y diseño digital</li>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="lizet-blatnik/index.html" class="student-link">
+                        <h3>Lizet Blatnik</h3>
+                    </a>
+                </article>
 
-                <li>Videojuegos</li>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="diana-callejas/index.html" class="student-link">
+                        <h3>Diana Callejas</h3>
+                    </a>
+                </article>
 
-                <li>Música</li>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="helen-chambi/index.html" class="student-link">
+                        <h3>Helen Chambi</h3>
+                    </a>
+                </article>
 
-                <li>Programación y tecnología</li>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="ana-condarco/index.html" class="student-link">
+                        <h3>Ana Condarco</h3>
+                    </a>
+                </article>
 
-                <li>Fotografía</li>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <div class="student-link">
+                        <h3>Adrian Duran</h3>
+                        <p>Página pendiente de publicación</p>
+                    </div>
+                </article>
 
-                <li>Diseño de interfaces y experiencias digitales</li>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="adriana-fernandez/index.html" class="student-link">
+                        <h3>Adriana Fernandez</h3>
+                    </a>
+                </article>
 
-            </ul>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="emilce-flores/index.html" class="student-link">
+                        <h3>Emilce Flores</h3>
+                    </a>
+                </article>
 
-        </section>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="angel-garitano/index.html" class="student-link">
+                        <h3>Angel Garitano</h3>
+                    </a>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="ignacio-gironas/index.html" class="student-link">
+                        <h3>Ignacio Gironas</h3>
+                    </a>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="eduardo-gomez/index.html" class="student-link">
+                        <h3>Eduardo Gomez</h3>
+                    </a>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <div class="student-link">
+                        <h3>Kevin Guisbert</h3>
+                        <p>Página pendiente de publicación</p>
+                    </div>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <div class="student-link">
+                        <h3>Ariana Guzman</h3>
+                        <p>Página pendiente de publicación</p>
+                    </div>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="nicole-hernandez/index.html" class="student-link">
+                        <h3>Nicole Hernandez</h3>
+                    </a>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="alejandro-lima/index.html" class="student-link">
+                        <h3>Alejandro Lima</h3>
+                    </a>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="claudia-morales/index.html" class="student-link">
+                        <h3>Claudia Morales</h3>
+                    </a>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="joshua-ona/index.html" class="student-link">
+                        <h3>Joshua Oña</h3>
+                    </a>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="maura-reynolds/index.html" class="student-link">
+                        <h3>Maura Reynolds</h3>
+                    </a>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="santiago-rojas/index.html" class="student-link">
+                        <h3>Santiago Rojas</h3>
+                    </a>
+                </article>
+
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="jhoan-sirpa/index.html" class="student-link">
+                        <h3>Jhoan Sirpa</h3>
+                    </a>
+                </article>
 
 
-        <!-- =====================================
-             4. ALGO QUE ME INSPIRA
-             ===================================== -->
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="carla-saenz/index.html" class="student-link">
+                        <h3>Carla Saenz</h3>
+                    </a>
+                </article>
 
-        <section id="inspiracion">
-
-            <h2>Algo que me inspira</h2>
-
-            <div class="inspiracion">
-
-                <!-- Coloca aquí la imagen de Shigeo Fukuda -->
-                <img 
-                    src="shigeo-fukuda.jpg"
-                    alt="Obra de Shigeo Fukuda">
-
-                <div class="texto-inspiracion">
-
-                    <h2>Shigeo Fukuda</h2>
-
-                    <p>
-                        Shigeo Fukuda es una de las referencias que más me
-                        inspira dentro del diseño gráfico. Su trabajo utiliza
-                        formas simples, ilusiones visuales y conceptos
-                        inteligentes para transmitir mensajes de una manera
-                        clara.
-                    </p>
-
-                    <br>
-
-                    <p>
-                        Me inspira porque demuestra que un diseño no necesita
-                        tener muchos elementos para comunicar una idea. La
-                        combinación entre creatividad, composición y
-                        simplicidad puede generar imágenes muy impactantes.
-                    </p>
-
-                </div>
+                <!-- Estudiante -->
+                <article class="student-card">
+                    <a href="gabriela-yugar/index.html" class="student-link">
+                        <h3>Gabriela Yugar</h3>
+                    </a>
+                </article>
 
             </div>
 
         </section>
-
     </main>
-
-
-    <!-- =====================================
-         PIE DE PÁGINA
-         ===================================== -->
-
-    <footer>
-
-        <p>
-            © By Vadhir 
-        </p>
-
-        <p>
-            Taller de Diseño Digital 1
-        </p>
-
+    <footer class="site-footer">
+        <p><a href="../../index.html">Volver al inicio</a></p>
+        <p>Universidad Católica Boliviana San Pablo · Taller de Diseño Digital 1</p>
     </footer>
-
+</div>
 </body>
 </html>
