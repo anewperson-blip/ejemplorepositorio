@@ -1,0 +1,131 @@
+/* Reseteo básico y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fuente redondeada y moderna similar a la referencia */
+}
+
+body {
+    background-color: #eef1f5; /* Fondo gris claro fuera de la columna central */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido en pantallas grandes */
+}
+
+/* Contenedor principal simulando la columna central de la imagen */
+header, nav, main, footer {
+    width: 100%;
+    max-width: 900px; /* Ancho máximo de la columna central */
+    background-color: #ffffff;
+}
+
+/* Cabecera / Banner Azul (Hero Section) */
+header {
+    background-color: #4285F4; /* Azul vibrante basado en la imagen */
+    color: #ffffff;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.foto-perfil {
+    border-radius: 50%; /* Hace la foto circular */
+    border: 4px solid #ffffff;
+    margin-top: 15px;
+    object-fit: cover;
+}
+
+/* Navegación - Estilo de botones "Píldora" */
+nav {
+    background-color: #f8f9fa; /* Fondo gris muy claro para separar la nav */
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #202124;
+    background-color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 30px; /* Borde redondeado estilo píldora */
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #dadce0;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #f1f3f4;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Contenido Principal y Tarjetas */
+main {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espacio entre secciones */
+}
+
+section {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0; /* Borde sutil de las tarjetas */
+    border-radius: 12px; /* Esquinas redondeadas de las tarjetas */
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+section h2 {
+    color: #202124;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+section h3 {
+    font-size: 1.1rem;
+    color: #4285F4; /* Azul de acento */
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style-position: inside;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+section li {
+    color: #5f6368;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #5f6368;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+}
