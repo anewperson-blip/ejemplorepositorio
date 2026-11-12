@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gael Vadhir Aguilar Barrera</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111111;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 70px 20px;
+            background-color: #1c1c1c;
+        }
+
+        header img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid white;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #cccccc;
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #000000;
+            padding: 18px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #888888;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section {
+            padding: 70px 30px;
+            border-bottom: 1px solid #333333;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #cccccc;
+            font-size: 17px;
+        }
+
+        ul {
+            margin-top: 20px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 12px 0;
+            color: #dddddd;
+        }
+
+        .inspiracion {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .inspiracion img {
+            width: 320px;
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        .texto-inspiracion {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .github {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #000000;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #888888;
+        }
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================
+         1. PRESENTACIÓN
+         ===================================== -->
+
+    <header id="inicio">
+
+        <!-- Coloca aquí tu fotografía -->
+        <img src="imagenes/8a5374d4-5252-4cce-8ab0-b9db68d48ab0.JPG" alt="Fotografía personal de Gael">
+
+        <h1>Gael Vadhir Aguilar Barrera</h1>
+
+
+        <a
+            class="github"
+            href="https://github.com/Vadhir17"
+            target="_blank">
+            Mi perfil de GitHub
+        </a>
+
+    </header>
+
+
+    <!-- =====================================
+         MENÚ DE NAVEGACIÓN
+         ===================================== -->
+
+    <nav>
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="#sobre-mi">Sobre mí</a>
+
+        <a href="#gustos">Gustos e intereses</a>
+
+        <a href="#inspiracion">Inspiración</a>
+
+    </nav>
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+         ===================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             2. SOBRE MÍ
+             ===================================== -->
+
+        <section id="sobre-mi">
+
+            <h2>Sobre mí</h2>
+
+            <p>
+                Soy estudiante de Diseño Digital y me interesa todo lo
+                relacionado con la creatividad, la comunicación visual y
+                la tecnología. Me gusta aprender nuevas herramientas y
+                experimentar con diferentes formas de expresar ideas.
+            </p>
+
+            <br>
+
+            <p>
+                Me considero una persona creativa, curiosa y perseverante.
+                Disfruto descubrir nuevas formas de crear y mejorar mis
+                habilidades, especialmente en áreas relacionadas con el
+                diseño y los medios digitales.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             3. GUSTOS E INTERESES
+             ===================================== -->
+
+        <section id="gustos">
+
+            <h2>Gustos e intereses</h2>
+
+            <p>
+                Algunas de las actividades y temas que más me interesan son:
+            </p>
+
+            <ul>
+
+                <li>Diseño gráfico y diseño digital</li>
+
+                <li>Videojuegos</li>
+
+                <li>Música</li>
+
+                <li>Programación y tecnología</li>
+
+                <li>Fotografía</li>
+
+                <li>Diseño de interfaces y experiencias digitales</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- =====================================
+             4. ALGO QUE ME INSPIRA
+             ===================================== -->
+
+        <section id="inspiracion">
+
+            <h2>Algo que me inspira</h2>
+
+            <div class="inspiracion">
+
+                <!-- Imagen de Shigeo Fukuda pendiente: no incluida en la entrega. -->
+
+                <div class="texto-inspiracion">
+
+                    <h2>Shigeo Fukuda</h2>
+
+                    <p>
+                        Shigeo Fukuda es una de las referencias que más me
+                        inspira dentro del diseño gráfico. Su trabajo utiliza
+                        formas simples, ilusiones visuales y conceptos
+                        inteligentes para transmitir mensajes de una manera
+                        clara.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Me inspira porque demuestra que un diseño no necesita
+                        tener muchos elementos para comunicar una idea. La
+                        combinación entre creatividad, composición y
+                        simplicidad puede generar imágenes muy impactantes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         PIE DE PÁGINA
+         ===================================== -->
+
+    <footer>
+
+        <p>
+            © By Vadhir
+        </p>
+
+        <p>
+            Taller de Diseño Digital 1
+        </p>
+
+    </footer>
+
+</body>
+</html>

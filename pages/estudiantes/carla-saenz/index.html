@@ -3,27 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi pagina personal</title>
-</head>
+    <title>Página Personal — Kai</title>
+    <!-- Vinculo al archivo externo CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="estilos.css">
+</head>
 <body>
-    <div>
-        <header> 
-             <h1>Mi nombre es Carla Saenz</h1>
-             <h2>Frase que me represente: El tiempo sana todo</h2>
-        </header>
-        <nav> 
-             <img src="" alt="">
-    <h3>Vinculo a perfil de github</h3>
-    <ul>    
-        <li>
-            <a href="https://github.com/carlasaenz-ucb">GitHub de Carla</a>
-        </li>
-    </ul>
+
+    <!-- 1. HEADER Y NAV -->
+    <header class="encabezado">
+        <h1>Página Personal de Kai</h1>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="#presentacion">Presentación</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#intereses">Intereses</a></li>
+                <li><a href="#inspiracion">Inspiración</a></li>
+            </ul>
         </nav>
-        <main>
-            <p>Mi nombre es Carla Saenz, soy digital designer, soy una persona curiosa hacia diferentes temas, tengo un </p>
-        </main>
-    </div>
+    </header>
+
+    <!-- 2. MAIN -->
+    <main class="contenedor-principal">
+
+        <!-- Requisito 1: Presentación -->
+        <section id="presentacion" class="tarjeta-perfil">
+                <img src="imagenes/KHTI0844.JPG" alt="Fotografía personal de Carla Saenz" class="foto-perfil">
+            <div class="info-personal">
+                <h2>Carla Antonella Saenz Zabala</h2>
+                <p class="frase">"El tiempo sana todo"</p>
+                <div class="redes">
+                    <a href="https://github.com/carlasaenz-ucb" target="_blank" class="boton-github">Perfil de GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requisito 2: Sobre mí -->
+        <section id="sobre-mi" class="seccion-bloque">
+            <h2>Sobre mí</h2>
+            <p class="texto-biografia">
+                Mi nombre es Carla pero la mayoría me suele decir <em>Kai</em>. Soy Diseñadora Digital, me gusta pintar y hacer pilates como terapia, me interesa conocer acerca de diferentes temas, también me gusta cantar y me gustaría viajar por todo el mundo.
+            </p>
+            <p class="texto-biografia">
+                Algo que considero importante recalcar en mí es que soy una persona responsable, con empatía y cuando me cuestionan algo interesante me encanta indagar en mis propios pensamientos y en las diferentes perspectivas de los demás.
+            </p>
+        </section>
+
+        <!-- Requisito 3: Gustos e intereses -->
+        <section id="intereses" class="seccion-bloque">
+            <h2>Gustos e intereses</h2>
+            <ul class="lista-hobbies">
+                <li>Me gusta pintar más que dibujar.</li>
+                <li>Me encanta cantar, es uno de mis hobbies favoritos.</li>
+                <li>Me gusta mucho apreciar los pequeños momentos y los pequeños detalles, amo de una manera indescriptible el cielo y me encanta verlo en todas sus maneras.</li>
+                <li>Me interesa bastante el mundo de las emociones y el expresionismo mediante el arte.</li>
+            </ul>
+        </section>
+
+        <!-- Requisito 4: Algo que me inspira -->
+        <section id="inspiracion" class="seccion-bloque seccion-inspiracion">
+            <h2>Algo que me inspira</h2>
+            <div class="contenido-inspiracion">
+                <!-- Cambia 'imagenes/cielo.jpg' por el nombre real de tu archivo de imagen -->
+                <img src="imagenes/img.cielo.jpeg" alt="Imagen del cielo y atardecer" class="imagen-inspiracion">
+                <div class="texto-inspiracion">
+                    <h3>El cielo y la interpretacion del ser humano</h3>
+                    <p>
+                        Me inspira profundamente contemplar el cielo en sus diferentes formas, colores y todo lo que conlleva a lo largo del día. Para mí el cielo es algo tan abstracto que es libre de interpretarse de millones de maneras, yo interpreto el cielo como mi lugar seguro en el cual se encuentra la calma y la inmensidad de mis emociones. Me hace sentir una conexion que no es con otro ser vivo lo cual refleja mi interes por el arte de expresar e interpretar los diferentes fenomenos que a uno lo hace sentir bien, donde no solo se pueda representar lo que vemos si no lo que sentimos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. FOOTER -->
+    <footer class="pie-pagina">
+        <p> Carla Antonella Saenz Zabala (Kai) — Taller de Diseño Digital 1</p>
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,141 @@
+/* Reset básico y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0713;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(93, 24, 214, 0.45) 0%, transparent 40%),
+        radial-gradient(circle at 50% 60%, rgba(255, 102, 196, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(76, 17, 142, 0.5) 0%, transparent 45%);
+    background-attachment: fixed;
+    color: #e2e1e8;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background: rgba(18, 14, 28, 0.65);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ffffff, #f0abfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+header img {
+    width: 180px !important;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 102, 196, 0.7);
+    box-shadow: 0 0 20px rgba(255, 102, 196, 0.3);
+}
+
+header h2 {
+    font-size: 1.4rem;
+    color: #bfa5ff;
+    margin-bottom: 10px;
+}
+
+header a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #ffffff;
+    color: #0b0713;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+header a:hover {
+    background: #ff66c4;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 102, 196, 0.6);
+}
+
+/* Contenido Principal */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section {
+    background: rgba(22, 17, 36, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 25px 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 128, 213, 0.3);
+}
+
+/* Títulos de sección en rosado que combinan con el fondo */
+section h2 {
+    color: #ff80d5;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "•";
+    color: #ff66c4;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 5px;
+    top: -4px;
+}
+
+/* Imágenes dentro de las secciones */
+section img {
+    width: 100% !important;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    margin: 15px 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
