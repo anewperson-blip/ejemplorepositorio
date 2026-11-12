@@ -1,77 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Alejandra Arguedas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.5;
-        }
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alejandra Arguedas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --noche: #1b2a5c;
+      --noche-oscuro: #121c40;
+      --amarillo: #f2b632;
+      --fondo: #f6f7fb;
+      --texto: #1f2540;
+      --suave: #5b6385;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+    body {
+      margin: 0;
+      font-family: "Nunito Sans", Arial, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--texto);
+      background: var(--fondo);
+    }
+
+    h1, h2 {
+      font-family: "Fraunces", Georgia, serif;
+      line-height: 1.2;
+      margin: 0 0 .5rem;
+    }
+
+    a { color: inherit; }
+
+    /* Navegación */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .25rem 1.5rem;
+      padding: .9rem 1rem;
+      background: var(--noche-oscuro);
+    }
+
+    nav a {
+      color: #dfe4f5;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .2rem 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--amarillo);
+      border-bottom-color: var(--amarillo);
+      outline: none;
+    }
+
+    /* Presentación */
+    #presentacion {
+      text-align: center;
+      padding: 3.5rem 1.25rem 4rem;
+      background: var(--noche);
+      color: #fff;
+    }
+
+    #presentacion img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--amarillo);
+      background: var(--noche-oscuro);
+      margin-bottom: 1.25rem;
+    }
+
+    #presentacion h1 { font-size: clamp(2rem, 6vw, 2.8rem); }
+
+    #presentacion p {
+      margin: 0 auto .75rem;
+      max-width: 32rem;
+      color: #dfe4f5;
+      font-size: 1.15rem;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: .5rem;
+      padding: .55rem 1.4rem;
+      border-radius: 999px;
+      background: var(--amarillo);
+      color: var(--noche-oscuro);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .boton:hover,
+    .boton:focus-visible { background: #ffc94d; outline: none; }
+
+    /* Contenido */
+    main section:not(#presentacion) {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 0;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      color: var(--noche);
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 4px;
+      margin-top: .4rem;
+      border-radius: 2px;
+      background: var(--amarillo);
+    }
+
+    p { margin: 1rem 0 0; }
+
+    ul {
+      margin: 1rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+    }
+
+    li {
+      padding: .4rem 1rem;
+      border-radius: 999px;
+      background: #e4e8f6;
+      color: var(--noche);
+      font-weight: 600;
+    }
+
+    #inspiracion img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 12px;
+    }
+
+    #inspiracion p { color: var(--suave); }
+
+    /*  Pie */
+    footer {
+      margin-top: 4rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      background: var(--noche-oscuro);
+      color: #b9c0dd;
+      font-size: .9rem;
+    }
+
+    footer p { margin: 0; }
+  </style>
 </head>
 <body>
-    <header>
+  <header>
     <nav>
-      <a href="#presentacion">Presentacion</a>
-      <a href="#sobre-mi">Sobre mi</a>
+      <a href="#presentacion">Presentación</a>
+      <a href="#sobre-mi">Sobre mí</a>
       <a href="#gustos">Gustos</a>
-      <a href="#inspiracion">Inspiracion</a>
+      <a href="#inspiracion">Inspiración</a>
     </nav>
   </header>
 
   <main>
 
-    <!-- =================================================
-             Presentacion
-        ================================================== -->
+    <!-- Presentación -->
     <section id="presentacion">
-      <img src="file:///C:/Users/HP/Downloads/WhatsApp%20Image%202026-08-24%20at%2012.35.25%20PM.jpeg" alt="">
+      <img src="imagenes/IMG-20251227-WA0015.jpg" alt="Foto de Alejandra Arguedas">
       <h1>Alejandra Arguedas</h1>
       <p>Ayudar es sembrar esperanza en otra vida.</p>
-      <p><a href="https://github.com/anewperson-blip" target="_blank">Mi GitHub</a></p>
+      <a class="boton" href="https://github.com/anewperson-blip" target="_blank" rel="noopener">Mi GitHub</a>
     </section>
 
-    <!-- =================================================
-             Sobre mi
-        ================================================== -->
+    <!-- Sobre mí -->
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
-      <p>Holaa a todos!! Mi nombre es Ale, estoy estudiando Diseno Digital y actualmente estoy cursando el 4to semestre. Espero conocerlos a todos y aprender juntos. </p>
+      <p>¡Holaa a todos! Mi nombre es Alejandra Arguedas; pero pueden llamarme Ale, estudio Diseño Digital y actualmente estoy cursando el 4.º semestre. Espero conocerlos a todos y aprender juntos.</p>
     </section>
 
-    <!-- =================================================
-             Gustos e intereses
-        ================================================== -->
+    <!-- Gustos e intereses -->
     <section id="gustos">
       <h2>Gustos e intereses</h2>
       <ul>
         <li>Dibujar</li>
-        <li>Escuchar musica</li>
+        <li>Escuchar música</li>
         <li>Salir a caminar</li>
-        <li>Descubrir producciones visuales</li>
+        <li>Grabado y serigrafia</li>
       </ul>
     </section>
 
-    <!-- =================================================
-             Que me inspira
-        ================================================== -->
+    <!-- Algo que me inspira -->
     <section id="inspiracion">
       <h2>Algo que me inspira</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg?utm_source=es.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="">
-      <p><strong>La noche estrellada de Vincent Van Gogh</strong>: Lo que me inspira es la capacidad de crear y transformar la realidad, pintores con Vincent Van Gogh que quiso que todos vieran de lo que fue capaz, espero que tambien pueda mostrar al mundo de lo que soy capaz.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="La noche estrellada, pintura de Vincent van Gogh">
+      <p><strong>La noche estrellada, de Vincent Van Gogh.</strong> Me inspira su capacidad de crear y transformar la realidad a través del arte. Pintores como Van Gogh buscaron demostrarle al mundo todo lo que eran capaces de expresar y crear. De la misma manera, yo quiero encontrar mi propia voz y demostrarle al mundo de lo que soy capaz.</p>
     </section>
 
   </main>
 
   <footer>
-    <p>Hecho por Nombre Alejandra Arguedas</p>
+    <p>Hecho por Alejandra Arguedas</p>
   </footer>
-
-
 </body>
 </html>
